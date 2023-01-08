@@ -1,1 +1,0 @@
-# thinkerall.github.io
