@@ -191,7 +191,7 @@
                     hreflang="zh-cn"
                     href="https://example.com/tags/emoji/"
                     /></url><url>
-            <loc>https://example.com/about/</loc><lastmod>2023-01-08T18:28:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://example.com/about/</loc><priority>0</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://example.com/en/about/"
