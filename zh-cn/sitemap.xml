@@ -29,7 +29,7 @@
                     hreflang="zh-cn"
                     href="https://example.com/zh-cn/posts/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/tags/</loc><lastmod>2023-01-11T02:38:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://example.com/zh-cn/tags/</loc><lastmod>2023-01-11T03:54:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://example.com/tags/"
@@ -38,7 +38,7 @@
                     hreflang="zh-cn"
                     href="https://example.com/zh-cn/tags/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/</loc><lastmod>2023-01-11T02:38:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://example.com/zh-cn/</loc><lastmod>2023-01-11T03:54:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://example.com/"
@@ -66,4 +66,13 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="https://example.com/zh-cn/categories/physics/"
+                    /></url><url>
+            <loc>https://example.com/zh-cn/tags/physics/</loc><lastmod>2023-01-11T03:54:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://example.com/tags/physics/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://example.com/zh-cn/tags/physics/"
                     /></url></urlset>
