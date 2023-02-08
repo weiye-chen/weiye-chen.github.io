@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Recursion Algorithm - Thinker&#39;s Blog</title><meta name="Description" content="Detailed explanation of Recursion Algorithm."><meta property="og:title" content="Recursion Algorithm" />
+<meta property="og:description" content="Detailed explanation of Recursion Algorithm." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://thinkerall.github.io/recursion/" /><meta property="og:image" content="https://thinkerall.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-08T08:00:00+08:00" />
+<meta property="article:modified_time" content="2023-02-09T01:12:41+08:00" /><meta property="og:site_name" content="Thinker&#39;s Blog" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://thinkerall.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Recursion Algorithm"/>
+<meta name="twitter:description" content="Detailed explanation of Recursion Algorithm."/>
+<meta name="application-name" content="Thinker&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Thinker&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://thinkerall.github.io/recursion/" /><link rel="prev" href="https://thinkerall.github.io/recursive-optimization/" /><link rel="next" href="https://thinkerall.github.io/mechanics_0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Recursion Algorithm",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/thinkerall.github.io\/recursion\/"
+        },"image": ["https:\/\/thinkerall.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Recursion, Algorithm","wordcount":  1004 ,
+        "url": "https:\/\/thinkerall.github.io\/recursion\/","datePublished": "2023-02-08T08:00:00+08:00","dateModified": "2023-02-09T01:12:41+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Weiye Chen","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/thinkerall.github.io\/images\/avatar.png",
+                    "width":  512 ,
+                    "height":  512 
+                }},"author": {
+                "@type": "Person",
+                "name": "Thiker"
+            },"description": "Detailed explanation of Recursion Algorithm."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Thinker&#39;s Blog">Thinker&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/thinkerall/thinkerall.github.io" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/recursion/" selected>English</option><option value="/zh-cn/recursion/">简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Thinker&#39;s Blog">Thinker&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/thinkerall/thinkerall.github.io" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/recursion/" selected>English</option><option value="/zh-cn/recursion/">简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Recursion Algorithm</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://thinkerall.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Thiker</a></span>&nbsp;<span class="post-category">included in <a href="/categories/data-structure-and-algorithm/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Data Structure and Algorithm</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-08">2023-02-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1004 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#characteristics-of-recursive-algorithm">Characteristics of Recursive Algorithm</a></li>
+    <li><a href="#design-elements-of-recursive-algorithm">Design elements of Recursive Algorithm</a></li>
+    <li><a href="#the-cases-of-recursive-algorithm">The cases of Recursive Algorithm</a>
+      <ul>
+        <li><a href="#the-calculation-of-factorial">The Calculation of factorial</a></li>
+        <li><a href="#fibonacci-sequence">Fibonacci sequence</a></li>
+        <li><a href="#hanoi-tower">Hanoi Tower</a></li>
+      </ul>
+    </li>
+    <li><a href="#recursion-and-loop">Recursion and Loop</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="introduction">Introduction</h2>
+<p> Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods. Simply put, it is the call of the program itself.
+The essence of recursive algorithm is to decompose the problem into smaller sub-problems, and then recursively call methods to represent the solution of the problem.</p>
+<h2 id="characteristics-of-recursive-algorithm">Characteristics of Recursive Algorithm</h2>
+<p> Recursive algorithm can simplify complex problems and make the code more concise.
+However, in the process of recursive call, the system opens up a stack for storing the return points and local quantities of each layer.
+Too many times of recursion can easily cause stack overflow and low efficiency, so it is generally not recommended to use recursive algorithm to design programs.</p>
+<h2 id="design-elements-of-recursive-algorithm">Design elements of Recursive Algorithm</h2>
+<ol>
+<li>Explicit recursion termination condition;</li>
+<li>Extract repetitive logic to reduce the scale of the problem;</li>
+<li>Give the processing method when recursion terminates.</li>
+</ol>
+<h2 id="the-cases-of-recursive-algorithm">The cases of Recursive Algorithm</h2>
+<h3 id="the-calculation-of-factorial">The Calculation of factorial</h3>
+<p> Factorial is a typical example of recursive algorithm.Factorial formula is n!=n*(n-1)*(n-2)*&hellip;*2*1.
+For example,Factorial of 5 is factorial(5)=5*4*3*2*1=120。The code for calculating factorial is as follows：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int factorial(int n){
+</span></span><span class="line"><span class="cl">	if(n==1){//base case
+</span></span><span class="line"><span class="cl">		return 1;
+</span></span><span class="line"><span class="cl">	}else{
+</span></span><span class="line"><span class="cl">		return n*factorial(n-1);
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p> The stop position is called the base case.
+The base case is the lowest position of the recursive program.
+There is no need to operate at this position, and a result can be returned directly.
+All recursive programs must have at least one base case, and must ensure that they will eventually reach a certain base case;
+Otherwise, the program will run forever until it lacks memory or stack space.</p>
+<h3 id="fibonacci-sequence">Fibonacci sequence</h3>
+<p> Fibonacci sequence was first used to describe the number of rabbits growing.
+Mathematically, Fibonacci sequence is defined by recursion.</p>
+<data id="id-1" data-raw></data>
+<p> Therefore, Fibonacci sequence recursion program code is as follows：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int Fibonacci(int n){
+</span></span><span class="line"><span class="cl">	if(n&lt;=1)
+</span></span><span class="line"><span class="cl">		return n;
+</span></span><span class="line"><span class="cl">	else
+</span></span><span class="line"><span class="cl">		return Fibonacci(n-1)+Fibonacci(n-2);
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="hanoi-tower">Hanoi Tower</h3>
+<p> Hanoi Tower problem is also a classical recursive problem。The problem is described as follows：</p>
+<p><figure><a class="lightgallery" href="./hanoi.gif" title="Hanoi" data-thumbnail="./hanoi.gif" data-sub-html="<h2>Figure1 Hanoi Tower</h2><p>Hanoi</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./hanoi.gif"
+            data-srcset="./hanoi.gif, ./hanoi.gif 1.5x, ./hanoi.gif 2x"
+            data-sizes="auto"
+            alt="./hanoi.gif" />
+    </a><figcaption class="image-caption">Figure1 Hanoi Tower</figcaption>
+    </figure></p>
+<blockquote>
+<p>Hanoi Tower originates from an ancient Indian legend.
+When Brahma created the world, he made three diamond pillars, on which 64 gold discs were stacked in order of size from bottom to top.
+The Brahma ordered the Brahman to rearrange the disc from below on another pillar in order of size.
+It is also stipulated that <strong>cannot put the large disk on the small disk at any time, and only one disk can be moved between three columns at a time</strong>.
+How should we operate?</p>
+</blockquote>
+<p><strong>Problem analysis</strong></p>
+<p><figure><a class="lightgallery" href="./hanoi_sloving.gif" title="HanoiSloving" data-thumbnail="./hanoi_sloving.gif" data-sub-html="<h2>Figure2 Sloution to Honoi Tower</h2><p>HanoiSloving</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="./hanoi_sloving.gif"
+            data-srcset="./hanoi_sloving.gif, ./hanoi_sloving.gif 1.5x, ./hanoi_sloving.gif 2x"
+            data-sizes="auto"
+            alt="./hanoi_sloving.gif" />
+    </a><figcaption class="image-caption">Figure2 Sloution to Honoi Tower</figcaption>
+    </figure></p>
+<ul>
+<li>If there is only one disk, you do not need to use the C-pillar to move the disk directly from A to B.</li>
+<li>If there are two disks, you can move disk 2 on disk 1 to C first; Move disc 1 to B; And then move disc 2 to B. This shows that two discs can be moved from A to B with the help of C.</li>
+<li>If there are three discs, the moving process is shown in Figure 2. According to the conclusion of the two disks, the two disks on disk 1 can be moved from A to B with the help of C; Move disk 1 from A to C, and A becomes empty ; With the help of the A-pillar, move the two discs from B to C.</li>
+</ul>
+<p> So,the above idea can be extended to the case of n disks.</p>
+<ol>
+<li>Move n-1 disks on the starting column to the auxiliary column;</li>
+<li>Move one disk left on the starting column to the target column;</li>
+<li>Move all the disks on the auxiliary column to the target column.</li>
+</ol>
+<p> The code of Hanoi Tower is as follows：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#include &lt;stdio.h&gt;
+</span></span><span class="line"><span class="cl">/*num represents the number of disks.
+</span></span><span class="line"><span class="cl">source、target and auxiliary represent the starting column、the target column and the target column.*/
+</span></span><span class="line"><span class="cl">void hanoi(int num, char sou, char tar,char aux) {
+</span></span><span class="line"><span class="cl">    //Count the number of moves
+</span></span><span class="line"><span class="cl">    static int i = 1;
+</span></span><span class="line"><span class="cl">    //If the number of disks is only 1, move directly from the starting column to the target column
+</span></span><span class="line"><span class="cl">    if (num == 1) {
+</span></span><span class="line"><span class="cl">        printf(&#34;No.%d:move from %c to %c\n&#34;, i, sou, tar);
+</span></span><span class="line"><span class="cl">        i++;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    else {
+</span></span><span class="line"><span class="cl">        //Call the hanoi () function recursively，Move num-1 discs from the starting column to the auxiliary column
+</span></span><span class="line"><span class="cl">        hanoi(num - 1, sou, aux, tar);
+</span></span><span class="line"><span class="cl">        //Move the last large disk remaining on the starting column to the target column
+</span></span><span class="line"><span class="cl">        printf(&#34;No.%d:move from %c to %c\n&#34;, i, sou, tar);
+</span></span><span class="line"><span class="cl">        i++;
+</span></span><span class="line"><span class="cl">        //Call the hanoi () function recursively to move the num-1 disk on the auxiliary column to the target column
+</span></span><span class="line"><span class="cl">        hanoi(num - 1, aux, tar, sou);
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">int main()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    //Take moving 3 disks as an example, the starting column, target column and auxiliary column are represented by A, B and C respectively
+</span></span><span class="line"><span class="cl">    hanoi(3, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;);
+</span></span><span class="line"><span class="cl">    return 0;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="recursion-and-loop">Recursion and Loop</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Recursion</th>
+<th>Loop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repeat</td>
+<td>To obtain the result, execute the same code block repeatedly; Repeated execution is realized by repeatedly calling yourself as a signal.</td>
+<td>To obtain the result, execute the same code block repeatedly; Repeat execution is achieved by completing the code block or executing the continue command signal.</td>
+</tr>
+<tr>
+<td>Termination conditions</td>
+<td>To ensure termination, recursive functions need to have a baseline condition to stop recursion.</td>
+<td>To ensure that it can be terminated, the loop must have one or more conditions that can make it terminate, and must ensure that it can meet one of these conditions under certain circumstances.</td>
+</tr>
+<tr>
+<td>state</td>
+<td>The current state is passed as a parameter.</td>
+<td>Update the current state when the cycle is in progress.</td>
+</tr>
+</tbody>
+</table>
+<p> Recursion has many similarities with loops. The difference is that the recursive function passes the new value as a parameter to the next function call, and rarely modifies the variable.
+Therefore, it can avoid using updatable variables, and at the same time, it can conduct repetitive and stateful behavior.</p>
+<h2 id="reference">Reference</h2>
+<p><a href="https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/" target="_blank" rel="noopener noreffer ">Detailed explanation of recursive algorithm</a></p>
+<p><a href="http://c.biancheng.net/algorithm/tower-of-hanoi.html" target="_blank" rel="noopener noreffer ">Hanoi Tower problem (divide and conquer+source code+animation demonstration)</a></p>
+<p><a href="https://blog.csdn.net/lltqyl/article/details/106604387" target="_blank" rel="noopener noreffer ">Recursive algorithm (illustrated)</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-02-09&nbsp;<a class="git-hash" href="https://github.com/thinkerall/thinkerall.github.io/commit/151117801dee3e79231bed659324441ad2f3a057" target="_blank" title="commit by thinkerall(486103739@qq.com) 151117801dee3e79231bed659324441ad2f3a057: update">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>1511178</a></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/recursion/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://thinkerall.github.io/recursion/" data-title="Recursion Algorithm" data-via="thinker_physics" data-hashtags="Recursion,Algorithm"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://thinkerall.github.io/recursion/" data-hashtag="Recursion"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://thinkerall.github.io/recursion/" data-title="Recursion Algorithm"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://thinkerall.github.io/recursion/" data-title="Recursion Algorithm"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://thinkerall.github.io/recursion/" data-title="Recursion Algorithm"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/recursion/">Recursion</a>,&nbsp;<a href="/tags/algorithm/">Algorithm</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/recursive-optimization/" class="prev" rel="prev" title="Recursion  Optimization "><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Recursion  Optimization </a>
+            <a href="/mechanics_0/" class="next" rel="next" title="Mechanics：Chapter 0-Introduction">Mechanics：Chapter 0-Introduction<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://thinkerall.github.io/" target="_blank">thinker</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"gitalk":{"admin":["thinkerall"],"clientID":"8716450d77022a5ec37e","clientSecret":"c7e86b40e9e18ed9327e71d6cd0c25226c20ec7f","id":"2023-02-08T08:00:00+08:00","owner":"thinkerall","repo":"blog-comment","title":"Recursion Algorithm"}},"data":{"id-1":"\n\\[ f(0)=0 \\\\ f(1)=1 \\\\ f(n)=f(n-1)+f(n-2) \\]\n"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"N170ZR7D2B","algoliaIndex":"index.en","algoliaSearchKey":"d760676380ec65544fbac0e68a8a7115","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-L7TNG89TL1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-L7TNG89TL1" async></script></body>
+</html>

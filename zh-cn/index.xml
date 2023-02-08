@@ -1,18 +1,42 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Thinker&#39;s Blog</title>
-        <link>https://example.com/zh-cn/</link>
+        <link>https://thinkerall.github.io/zh-cn/</link>
         <description>The website is a personal blog for learning and sharing knowledge.</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenweiye.thinker@gmail.com (thinker)</managingEditor>
-            <webMaster>chenweiye.thinker@gmail.com (thinker)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 10 Jan 2023 21:57:40 &#43;0800</lastBuildDate>
-            <atom:link href="https://example.com/zh-cn/index.xml" rel="self" type="application/rss+xml" />
+            <webMaster>chenweiye.thinker@gmail.com (thinker)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 Feb 2023 01:00:40 &#43;0800</lastBuildDate>
+            <atom:link href="https://thinkerall.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>测试</title>
-    <link>https://example.com/zh-cn/physics-me/</link>
+    <title>力学：第0章-绪论</title>
+    <link>https://thinkerall.github.io/zh-cn/mechanics_0/</link>
     <pubDate>Tue, 10 Jan 2023 21:57:40 &#43;0800</pubDate>
     <author>Thinker</author>
-    <guid>https://example.com/zh-cn/physics-me/</guid>
-    <description><![CDATA[测试]]></description>
+    <guid>https://thinkerall.github.io/zh-cn/mechanics_0/</guid>
+    <description><![CDATA[课程讲义链接: https://pan.baidu.com/s/1i5MkR9F 密码: jafs]]></description>
+</item>
+<item>
+    <title>递归算法</title>
+    <link>https://thinkerall.github.io/zh-cn/recursion/</link>
+    <pubDate>Wed, 08 Feb 2023 08:00:00 &#43;0800</pubDate>
+    <author>Thinker</author>
+    <guid>https://thinkerall.github.io/zh-cn/recursion/</guid>
+    <description><![CDATA[概述 递归算法是一种直接或者间接调用自身函数或者方法的算法。说简单了就是程序自身的调用。 递归算法的本质是将问题不断分解为规模缩小的子问题，然后]]></description>
+</item>
+<item>
+    <title>递归优化</title>
+    <link>https://thinkerall.github.io/zh-cn/recursive-optimization/</link>
+    <pubDate>Thu, 09 Feb 2023 00:45:40 &#43;0800</pubDate>
+    <author>Thinker</author>
+    <guid>https://thinkerall.github.io/zh-cn/recursive-optimization/</guid>
+    <description><![CDATA[递归算法 通常来说，递归算法的运行效率很低，容易造成栈溢出。有关递归算法的详细介绍见递归详解。 递归算法优化策略 递归优化策略通常有两种。 时间复杂]]></description>
+</item>
+<item>
+    <title>力学：第1章-质点运动学</title>
+    <link>https://thinkerall.github.io/zh-cn/mechanics_1/</link>
+    <pubDate>Thu, 09 Feb 2023 01:00:40 &#43;0800</pubDate>
+    <author>Thinker</author>
+    <guid>https://thinkerall.github.io/zh-cn/mechanics_1/</guid>
+    <description><![CDATA[质点运动学]]></description>
 </item>
 </channel>
 </rss>
