@@ -2,7 +2,7 @@
 
 ## 概述
 
-&emsp;&emsp;递归算法是一种直接或者间接调用自身函数或者方法的算法。说简单了就是程序自身的调用。
+&emsp;&emsp;递归算法是一种直接或者间接调用自身函数或者方法的算法。简单来说就是程序自身的调用。
 递归算法的本质是将问题不断分解为规模缩小的子问题，然后递归调用方法来表示问题的解。
 
 ## 递归算法的特点
@@ -127,9 +127,9 @@ int main()
 
 ## 参考
 
-[递归算法详解](https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/)
+&emsp;&emsp;[递归算法详解](https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/)
 
-[汉诺塔问题（分治+源码+动画演示）](http://c.biancheng.net/algorithm/tower-of-hanoi.html)
+&emsp;&emsp;[汉诺塔问题（分治+源码+动画演示）](http://c.biancheng.net/algorithm/tower-of-hanoi.html)
 
-[全面理解递归](https://blog.csdn.net/lltqyl/article/details/106604387)
+&emsp;&emsp;[全面理解递归](https://blog.csdn.net/lltqyl/article/details/106604387)
 

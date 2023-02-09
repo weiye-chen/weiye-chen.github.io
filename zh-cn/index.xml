@@ -20,7 +20,7 @@
     <pubDate>Wed, 08 Feb 2023 08:00:00 &#43;0800</pubDate>
     <author>Thinker</author>
     <guid>https://thinkerall.github.io/zh-cn/recursion/</guid>
-    <description><![CDATA[概述 递归算法是一种直接或者间接调用自身函数或者方法的算法。说简单了就是程序自身的调用。 递归算法的本质是将问题不断分解为规模缩小的子问题，然后]]></description>
+    <description><![CDATA[概述 递归算法是一种直接或者间接调用自身函数或者方法的算法。简单来说就是程序自身的调用。 递归算法的本质是将问题不断分解为规模缩小的子问题，然后]]></description>
 </item>
 <item>
     <title>递归优化</title>

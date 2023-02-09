@@ -10,7 +10,8 @@
     <pubDate>Thu, 09 Feb 2023 00:45:40 &#43;0800</pubDate>
     <author>Thinker</author>
     <guid>https://thinkerall.github.io/recursive-optimization/</guid>
-    <description><![CDATA[Recursive Algorithm Generally speaking, recursive algorithms are inefficient and easy to cause stack overflow. For a detailed introduction of recursive algorithm, see Recursion Details
+    <description><![CDATA[Recursive Algorithm Generally speaking, recursive algorithms are inefficient and easy to cause stack overflow.
+For a detailed introduction of recursive algorithm, see Recursion Details
 Recursive algorithm optimization strategy There are usually two recursive optimization strategies.
 Optimization of time complexity; Optimization of spatial complexity. This article takes Fibonacci sequence as an example to explain.
 Optimization of time complexity It is not difficult to see that when calculating f(n)=f(n-1)+f(n-2), we should first calculate f(n-1) and f(n-2), including f(n-1)=f(n-2)+f(n-3)and f(n-2)=f(n-3)+f(n-4).]]></description>

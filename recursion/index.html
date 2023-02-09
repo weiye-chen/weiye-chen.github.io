@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://thinkerall.github.io/recursion/" /><meta property="og:image" content="https://thinkerall.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-02-08T08:00:00+08:00" />
-<meta property="article:modified_time" content="2023-02-09T01:12:41+08:00" /><meta property="og:site_name" content="Thinker&#39;s Blog" />
+<meta property="article:modified_time" content="2023-02-09T13:30:13+08:00" /><meta property="og:site_name" content="Thinker&#39;s Blog" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://thinkerall.github.io/logo.png"/>
 
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/thinkerall.github.io\/recursion\/"
-        },"image": ["https:\/\/thinkerall.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Recursion, Algorithm","wordcount":  1004 ,
-        "url": "https:\/\/thinkerall.github.io\/recursion\/","datePublished": "2023-02-08T08:00:00+08:00","dateModified": "2023-02-09T01:12:41+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/thinkerall.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Recursion, Algorithm","wordcount":  1006 ,
+        "url": "https:\/\/thinkerall.github.io\/recursion\/","datePublished": "2023-02-08T08:00:00+08:00","dateModified": "2023-02-09T13:30:13+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Weiye Chen","logo": {
                     "@type": "ImageObject",
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Recursion Algorithm</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://thinkerall.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Thiker</a></span>&nbsp;<span class="post-category">included in <a href="/categories/data-structure-and-algorithm/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Data Structure and Algorithm</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-08">2023-02-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1004 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-08">2023-02-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1006 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -138,7 +138,8 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="introduction">Introduction</h2>
-<p> Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods. Simply put, it is the call of the program itself.
+<p> Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods.
+Simply put, it is the call of the program itself.
 The essence of recursive algorithm is to decompose the problem into smaller sub-problems, and then recursively call methods to represent the solution of the problem.</p>
 <h2 id="characteristics-of-recursive-algorithm">Characteristics of Recursive Algorithm</h2>
 <p> Recursive algorithm can simplify complex problems and make the code more concise.
@@ -152,8 +153,9 @@ Too many times of recursion can easily cause stack overflow and low efficiency, 
 </ol>
 <h2 id="the-cases-of-recursive-algorithm">The cases of Recursive Algorithm</h2>
 <h3 id="the-calculation-of-factorial">The Calculation of factorial</h3>
-<p> Factorial is a typical example of recursive algorithm.Factorial formula is n!=n*(n-1)*(n-2)*&hellip;*2*1.
-For example,Factorial of 5 is factorial(5)=5*4*3*2*1=120。The code for calculating factorial is as follows：</p>
+<p> Factorial is a typical example of recursive algorithm. Factorial formula is n!=n*(n-1)*(n-2)*&hellip;*2*1 .
+For example, factorial(5)=5*4*3*2*1=120.
+The code for calculating factorial is as follows：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -203,7 +205,8 @@ Mathematically, Fibonacci sequence is defined by recursion.</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="hanoi-tower">Hanoi Tower</h3>
-<p> Hanoi Tower problem is also a classical recursive problem。The problem is described as follows：</p>
+<p> Hanoi Tower problem is also a classical recursive problem.
+The problem is described as follows：</p>
 <p><figure><a class="lightgallery" href="./hanoi.gif" title="Hanoi" data-thumbnail="./hanoi.gif" data-sub-html="<h2>Figure1 Hanoi Tower</h2><p>Hanoi</p>">
         <img
             class="lazyload"
@@ -237,7 +240,7 @@ How should we operate?</p>
 <li>If there are two disks, you can move disk 2 on disk 1 to C first; Move disc 1 to B; And then move disc 2 to B. This shows that two discs can be moved from A to B with the help of C.</li>
 <li>If there are three discs, the moving process is shown in Figure 2. According to the conclusion of the two disks, the two disks on disk 1 can be moved from A to B with the help of C; Move disk 1 from A to C, and A becomes empty ; With the help of the A-pillar, move the two discs from B to C.</li>
 </ul>
-<p> So,the above idea can be extended to the case of n disks.</p>
+<p> So, the above idea can be extended to the case of n disks.</p>
 <ol>
 <li>Move n-1 disks on the starting column to the auxiliary column;</li>
 <li>Move one disk left on the starting column to the target column;</li>
@@ -334,15 +337,15 @@ How should we operate?</p>
 <p> Recursion has many similarities with loops. The difference is that the recursive function passes the new value as a parameter to the next function call, and rarely modifies the variable.
 Therefore, it can avoid using updatable variables, and at the same time, it can conduct repetitive and stateful behavior.</p>
 <h2 id="reference">Reference</h2>
-<p><a href="https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/" target="_blank" rel="noopener noreffer ">Detailed explanation of recursive algorithm</a></p>
-<p><a href="http://c.biancheng.net/algorithm/tower-of-hanoi.html" target="_blank" rel="noopener noreffer ">Hanoi Tower problem (divide and conquer+source code+animation demonstration)</a></p>
-<p><a href="https://blog.csdn.net/lltqyl/article/details/106604387" target="_blank" rel="noopener noreffer ">Recursive algorithm (illustrated)</a></p>
+<p> <a href="https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/" target="_blank" rel="noopener noreffer ">Detailed explanation of recursive algorithm</a></p>
+<p> <a href="http://c.biancheng.net/algorithm/tower-of-hanoi.html" target="_blank" rel="noopener noreffer ">Hanoi Tower problem (divide and conquer+source code+animation demonstration)</a></p>
+<p> <a href="https://blog.csdn.net/lltqyl/article/details/106604387" target="_blank" rel="noopener noreffer ">Recursive algorithm (illustrated)</a></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2023-02-09&nbsp;<a class="git-hash" href="https://github.com/thinkerall/thinkerall.github.io/commit/151117801dee3e79231bed659324441ad2f3a057" target="_blank" title="commit by thinkerall(486103739@qq.com) 151117801dee3e79231bed659324441ad2f3a057: update">
-                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>1511178</a></span>
+                <span>Updated on 2023-02-09&nbsp;<a class="git-hash" href="https://github.com/thinkerall/thinkerall.github.io/commit/1c5942367b21248c5edae17f8b3a71892b63a946" target="_blank" title="commit by thinkerall(486103739@qq.com) 1c5942367b21248c5edae17f8b3a71892b63a946: update">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>1c59423</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>

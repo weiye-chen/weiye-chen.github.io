@@ -2,7 +2,8 @@
 
 ## Introduction
 
-&emsp;Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods. Simply put, it is the call of the program itself.
+&emsp;Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods. 
+Simply put, it is the call of the program itself.
 The essence of recursive algorithm is to decompose the problem into smaller sub-problems, and then recursively call methods to represent the solution of the problem.
 
 ## Characteristics of Recursive Algorithm
@@ -19,8 +20,9 @@ Too many times of recursion can easily cause stack overflow and low efficiency, 
 ## The cases of Recursive Algorithm
 
 ### The Calculation of factorial
-&emsp;Factorial is a typical example of recursive algorithm.Factorial formula is n!=n\*(n-1)\*(n-2)\*...\*2\*1.
-For example,Factorial of 5 is factorial(5)=5\*4\*3\*2\*1=120。The code for calculating factorial is as follows：
+&emsp;Factorial is a typical example of recursive algorithm. Factorial formula is n!=n\*(n-1)\*(n-2)\*...\*2\*1 .
+For example, factorial(5)=5\*4\*3\*2\*1=120. 
+The code for calculating factorial is as follows：
 
 ```
 int factorial(int n){
@@ -31,16 +33,16 @@ int factorial(int n){
 	}
 }
 ```
-&emsp;The stop position is called the base case.
+&emsp;The stop position is called the base case. 
 The base case is the lowest position of the recursive program. 
-There is no need to operate at this position, and a result can be returned directly.
-All recursive programs must have at least one base case, and must ensure that they will eventually reach a certain base case;
-Otherwise, the program will run forever until it lacks memory or stack space.
+There is no need to operate at this position, and a result can be returned directly. 
+All recursive programs must have at least one base case, and must ensure that they will eventually reach a certain base case; 
+Otherwise, the program will run forever until it lacks memory or stack space. 
 
 ### Fibonacci sequence
 
-&emsp;Fibonacci sequence was first used to describe the number of rabbits growing.
-Mathematically, Fibonacci sequence is defined by recursion.
+&emsp;Fibonacci sequence was first used to describe the number of rabbits growing. 
+Mathematically, Fibonacci sequence is defined by recursion. 
 
 {{< raw >}}
 \[ f(0)=0 \\ f(1)=1 \\ f(n)=f(n-1)+f(n-2) \]
@@ -58,14 +60,15 @@ int Fibonacci(int n){
 ```
 
 ### Hanoi Tower
-&emsp;Hanoi Tower problem is also a classical recursive problem。The problem is described as follows：
+&emsp;Hanoi Tower problem is also a classical recursive problem. 
+The problem is described as follows：
 
 ![Hanoi](./hanoi.gif "Figure1 Hanoi Tower")
 
-> Hanoi Tower originates from an ancient Indian legend.
-When Brahma created the world, he made three diamond pillars, on which 64 gold discs were stacked in order of size from bottom to top.
-The Brahma ordered the Brahman to rearrange the disc from below on another pillar in order of size.
-It is also stipulated that **cannot put the large disk on the small disk at any time, and only one disk can be moved between three columns at a time**.
+> Hanoi Tower originates from an ancient Indian legend. 
+When Brahma created the world, he made three diamond pillars, on which 64 gold discs were stacked in order of size from bottom to top. 
+The Brahma ordered the Brahman to rearrange the disc from below on another pillar in order of size. 
+It is also stipulated that **cannot put the large disk on the small disk at any time, and only one disk can be moved between three columns at a time**. 
 How should we operate?
 
 **Problem analysis**
@@ -76,7 +79,7 @@ How should we operate?
 * If there are two disks, you can move disk 2 on disk 1 to C first; Move disc 1 to B; And then move disc 2 to B. This shows that two discs can be moved from A to B with the help of C.
 * If there are three discs, the moving process is shown in Figure 2. According to the conclusion of the two disks, the two disks on disk 1 can be moved from A to B with the help of C; Move disk 1 from A to C, and A becomes empty ; With the help of the A-pillar, move the two discs from B to C.
 
-&emsp;So,the above idea can be extended to the case of n disks.
+&emsp;So, the above idea can be extended to the case of n disks. 
 
 1. Move n-1 disks on the starting column to the auxiliary column;
 2. Move one disk left on the starting column to the target column;
@@ -126,8 +129,8 @@ int main()
 Therefore, it can avoid using updatable variables, and at the same time, it can conduct repetitive and stateful behavior.
 ## Reference
 
-[Detailed explanation of recursive algorithm](https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/)
+&emsp;[Detailed explanation of recursive algorithm](https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/)
 
-[Hanoi Tower problem (divide and conquer+source code+animation demonstration)](http://c.biancheng.net/algorithm/tower-of-hanoi.html)
+&emsp;[Hanoi Tower problem (divide and conquer+source code+animation demonstration)](http://c.biancheng.net/algorithm/tower-of-hanoi.html)
 
-[Recursive algorithm (illustrated)](https://blog.csdn.net/lltqyl/article/details/106604387)
+&emsp;[Recursive algorithm (illustrated)](https://blog.csdn.net/lltqyl/article/details/106604387)

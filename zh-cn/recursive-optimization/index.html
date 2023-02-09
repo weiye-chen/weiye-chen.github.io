@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://thinkerall.github.io/zh-cn/recursive-optimization/" /><meta property="og:image" content="https://thinkerall.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-02-09T00:45:40+08:00" />
-<meta property="article:modified_time" content="2023-02-09T01:12:41+08:00" /><meta property="og:site_name" content="Thinker&#39;s Blog" />
+<meta property="article:modified_time" content="2023-02-09T13:30:13+08:00" /><meta property="og:site_name" content="Thinker&#39;s Blog" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://thinkerall.github.io/logo.png"/>
 
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/thinkerall.github.io\/zh-cn\/recursive-optimization\/"
-        },"image": ["https:\/\/thinkerall.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "递归, 算法, 优化","wordcount":  1461 ,
-        "url": "https:\/\/thinkerall.github.io\/zh-cn\/recursive-optimization\/","datePublished": "2023-02-09T00:45:40+08:00","dateModified": "2023-02-09T01:12:41+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/thinkerall.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "递归, 算法, 优化","wordcount":  1463 ,
+        "url": "https:\/\/thinkerall.github.io\/zh-cn\/recursive-optimization\/","datePublished": "2023-02-09T00:45:40+08:00","dateModified": "2023-02-09T13:30:13+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Weiye Chen","logo": {
                     "@type": "ImageObject",
@@ -114,7 +114,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">递归优化</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://thinkerall.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Thinker</a></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数据结构与算法</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-09">2023-02-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1461 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-09">2023-02-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1463 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -147,8 +147,8 @@
 </ol>
 <p>本文以斐波那契数列为例进行讲解。</p>
 <h3 id="时间复杂度的优化">时间复杂度的优化</h3>
-<p>  不难看出，在计算f(n)=f(n-1)+f(n-2)时，要先计算f(n-1)和f(n-2),
-f(n-1)=f(n-2)+f(n-3);f(n-2)=f(n-3)+f(n-4);在计算过程中，f(n-2)被计算了两次。
+<p>  不难看出，在计算f(n)=f(n-1)+f(n-2)时，要先计算f(n-1)和f(n-2),其中
+f(n-1)=f(n-2)+f(n-3)，f(n-2)=f(n-3)+f(n-4)。在计算过程中，f(n-2)被计算了两次。
 因此在，斐波那契数列的计算过程中存在着大量的冗余计算。</p>
 <p>  为了消除上述情况中的重复计算，其中一个想法是将中间结果存储在缓存中，以便我们以后可以重用它们，而不需要重新计算。
 这个想法也被称为<strong>记忆化</strong>，这是一种经常与递归一起使用的技术。
@@ -185,7 +185,7 @@ f(n-1)=f(n-2)+f(n-3);f(n-2)=f(n-3)+f(n-4);在计算过程中，f(n-2)被计算�
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>时间复杂度O(2^n)-&gt;O(n),该优化算法的本质其实是<strong>动态规划</strong>的思想。</p>
+</div><p>时间复杂度O(2^n)-&gt;O(n)，该优化算法的本质其实是<strong>动态规划</strong>的思想。</p>
 <h3 id="空间复杂度的优化">空间复杂度的优化</h3>
 <p>  递归调用在系统调用栈上会产生额外空间，如果递归调用层级很深，程序执行过程中很可能导致栈溢出。
 针对这种情况，有一种称为<strong>尾递归</strong>的特殊递归，它可以控制递归导致空间开销的影响。</p>
@@ -200,8 +200,8 @@ f(n-1)=f(n-2)+f(n-3);f(n-2)=f(n-3)+f(n-4);在计算过程中，f(n-2)被计算�
 如果在函数A的内部调用函数B，那么在A的调用记录上方，还会形成一个B的调用记录。
 等到B运行结束，将结果返回到A，B的调用记录才会消失。
 如果函数B内部还调用函数C，那就还有一个C的调用记录栈。
-以此类推，所有的调用记录，就形成一个&quot;<strong>调用栈</strong>&quot;<strong>（call stack）</strong>。
-<strong>尾调用</strong>由于是函数的最后一步操作，所以不需要保留外层函数的调用记录，
+以此类推，所有的调用记录，就形成一个&quot;<strong>调用栈</strong>&quot;<strong>（call stack）</strong>。</p>
+<p>  尾调用由于是函数的最后一步操作，所以不需要保留外层函数的调用记录，
 因为调用位置、内部变量等信息都不会再用到了，
 只要直接用内层函数的调用记录，取代外层函数的调用记录就可以了。</p>
 </blockquote>
@@ -231,8 +231,8 @@ f(n-1)=f(n-2)+f(n-3);f(n-2)=f(n-3)+f(n-4);在计算过程中，f(n-2)被计算�
 所以以下的调用，acc 要用初始值 0，cal 也要用第二位的值这里也是1，
 调用的方法就是 fibonacciTail(n, 0, 1）。</p>
 <h4 id="函数改写">函数改写</h4>
-<p>尾递归函数优化后函数需要的参数不够直观。因此，我们通常使用下面两种方法进行改写。</p>
-<p>1.柯里化（currying），将多参数的函数转换成单参数的形式</p>
+<p>  尾递归函数优化后函数需要的参数不够直观。因此，我们通常使用下面两种方法进行改写。</p>
+<p>  1.柯里化（currying），将多参数的函数转换成单参数的形式</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -259,7 +259,7 @@ f(n-1)=f(n-2)+f(n-3);f(n-2)=f(n-3)+f(n-4);在计算过程中，f(n-2)被计算�
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>2.函数参数初始化</p>
+</div><p>  2.函数参数初始化</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -281,15 +281,15 @@ f(n-1)=f(n-2)+f(n-3);f(n-2)=f(n-3)+f(n-4);在计算过程中，f(n-2)被计算�
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="参考">参考</h2>
-<p><a href="https://zhuanlan.zhihu.com/p/150562212" target="_blank" rel="noopener noreffer ">全面理解递归</a></p>
-<p><a href="https://blog.csdn.net/HEYUJIEBOY/article/details/76692870" target="_blank" rel="noopener noreffer ">递归（Recursion）的两种优化方法</a></p>
-<p><a href="https://cloud.tencent.com/developer/article/1694405" target="_blank" rel="noopener noreffer ">递归如何优化-尾递归优化</a></p>
+<p>  <a href="https://zhuanlan.zhihu.com/p/150562212" target="_blank" rel="noopener noreffer ">全面理解递归</a></p>
+<p>  <a href="https://blog.csdn.net/HEYUJIEBOY/article/details/76692870" target="_blank" rel="noopener noreffer ">递归（Recursion）的两种优化方法</a></p>
+<p>  <a href="https://cloud.tencent.com/developer/article/1694405" target="_blank" rel="noopener noreffer ">递归如何优化-尾递归优化</a></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-02-09&nbsp;<a class="git-hash" href="https://github.com/thinkerall/thinkerall.github.io/commit/151117801dee3e79231bed659324441ad2f3a057" target="_blank" title="commit by thinkerall(486103739@qq.com) 151117801dee3e79231bed659324441ad2f3a057: update">
-                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>1511178</a></span>
+                <span>更新于 2023-02-09&nbsp;<a class="git-hash" href="https://github.com/thinkerall/thinkerall.github.io/commit/1c5942367b21248c5edae17f8b3a71892b63a946" target="_blank" title="commit by thinkerall(486103739@qq.com) 1c5942367b21248c5edae17f8b3a71892b63a946: update">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>1c59423</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>

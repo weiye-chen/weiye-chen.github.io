@@ -15,8 +15,8 @@
 
 ### 时间复杂度的优化 
 
-&emsp;&emsp;不难看出，在计算f(n)=f(n-1)+f(n-2)时，要先计算f(n-1)和f(n-2),
-f(n-1)=f(n-2)+f(n-3);f(n-2)=f(n-3)+f(n-4);在计算过程中，f(n-2)被计算了两次。
+&emsp;&emsp;不难看出，在计算f(n)=f(n-1)+f(n-2)时，要先计算f(n-1)和f(n-2),其中
+f(n-1)=f(n-2)+f(n-3)，f(n-2)=f(n-3)+f(n-4)。在计算过程中，f(n-2)被计算了两次。
 因此在，斐波那契数列的计算过程中存在着大量的冗余计算。
 
 &emsp;&emsp;为了消除上述情况中的重复计算，其中一个想法是将中间结果存储在缓存中，以便我们以后可以重用它们，而不需要重新计算。
@@ -39,7 +39,7 @@ int fibonacci(int n){
 }
 ```
 
-时间复杂度O(2^n)-\>O(n),该优化算法的本质其实是**动态规划**的思想。
+时间复杂度O(2^n)-\>O(n)，该优化算法的本质其实是**动态规划**的思想。
 
 ### 空间复杂度的优化
 
@@ -53,14 +53,15 @@ int fibonacci(int n){
 
 > **尾调用**
 >
->&emsp;&emsp;函数调用会在内存形成一个"**调用记录**"，又称"**调用帧**"**（call frame）**，保存**调用位置**和**内部变量**等信息。
-如果在函数A的内部调用函数B，那么在A的调用记录上方，还会形成一个B的调用记录。
-等到B运行结束，将结果返回到A，B的调用记录才会消失。
-如果函数B内部还调用函数C，那就还有一个C的调用记录栈。
-以此类推，所有的调用记录，就形成一个"**调用栈**"**（call stack）**。
-**尾调用**由于是函数的最后一步操作，所以不需要保留外层函数的调用记录，
-因为调用位置、内部变量等信息都不会再用到了，
-只要直接用内层函数的调用记录，取代外层函数的调用记录就可以了。
+> &emsp;&emsp;函数调用会在内存形成一个"**调用记录**"，又称"**调用帧**"**（call frame）**，保存**调用位置**和**内部变量**等信息。
+> 如果在函数A的内部调用函数B，那么在A的调用记录上方，还会形成一个B的调用记录。
+> 等到B运行结束，将结果返回到A，B的调用记录才会消失。
+> 如果函数B内部还调用函数C，那就还有一个C的调用记录栈。
+> 以此类推，所有的调用记录，就形成一个"**调用栈**"**（call stack）**。
+>
+> &emsp;&emsp;尾调用由于是函数的最后一步操作，所以不需要保留外层函数的调用记录，
+> 因为调用位置、内部变量等信息都不会再用到了，
+> 只要直接用内层函数的调用记录，取代外层函数的调用记录就可以了。
 
 ```
 int fibonacciTail(int n, int acc, int cal){
@@ -80,9 +81,9 @@ int fibonacciTail(int n, int acc, int cal){
 
 #### 函数改写
 
-尾递归函数优化后函数需要的参数不够直观。因此，我们通常使用下面两种方法进行改写。
+&emsp;&emsp;尾递归函数优化后函数需要的参数不够直观。因此，我们通常使用下面两种方法进行改写。
 
-1.柯里化（currying），将多参数的函数转换成单参数的形式
+&emsp;&emsp;1.柯里化（currying），将多参数的函数转换成单参数的形式
 
 ```
 int fibonacciTail(int n, int acc, int cal){
@@ -97,7 +98,7 @@ int fibonacci(int n){
 }
 ```
 
-2.函数参数初始化
+&emsp;&emsp;2.函数参数初始化
 
 ```
 int fibonacciTail(int n, int acc=0, int cal=1){
@@ -110,8 +111,8 @@ int fibonacciTail(int n, int acc=0, int cal=1){
 ```
 ## 参考
 
-[全面理解递归](https://zhuanlan.zhihu.com/p/150562212)
+&emsp;&emsp;[全面理解递归](https://zhuanlan.zhihu.com/p/150562212)
 
-[递归（Recursion）的两种优化方法](https://blog.csdn.net/HEYUJIEBOY/article/details/76692870)
+&emsp;&emsp;[递归（Recursion）的两种优化方法](https://blog.csdn.net/HEYUJIEBOY/article/details/76692870)
 
-[递归如何优化-尾递归优化](https://cloud.tencent.com/developer/article/1694405)
+&emsp;&emsp;[递归如何优化-尾递归优化](https://cloud.tencent.com/developer/article/1694405)
