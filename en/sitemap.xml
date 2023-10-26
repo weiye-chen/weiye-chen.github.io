@@ -2,16 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://thinkerall.github.io/mechanics_0/</loc><lastmod>2023-02-09T01:12:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://thinkerall.github.io/zh-cn/mechanics_0/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://thinkerall.github.io/mechanics_0/"
-                    /></url><url>
-            <loc>https://thinkerall.github.io/recursion/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://thinkerall.github.io/recursion/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://thinkerall.github.io/zh-cn/recursion/"
@@ -20,7 +11,7 @@
                     hreflang="en"
                     href="https://thinkerall.github.io/recursion/"
                     /></url><url>
-            <loc>https://thinkerall.github.io/recursive-optimization/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://thinkerall.github.io/recursive-optimization/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://thinkerall.github.io/zh-cn/recursive-optimization/"
@@ -29,16 +20,8 @@
                     hreflang="en"
                     href="https://thinkerall.github.io/recursive-optimization/"
                     /></url><url>
-            <loc>https://thinkerall.github.io/mechanics_1/</loc><lastmod>2023-02-09T02:07:56&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://thinkerall.github.io/zh-cn/mechanics_1/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://thinkerall.github.io/mechanics_1/"
-                    /></url><url>
-            <loc>https://thinkerall.github.io/categories/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://thinkerall.github.io/tags/algorithm/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://thinkerall.github.io/categories/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://thinkerall.github.io/zh-cn/categories/"
@@ -47,17 +30,9 @@
                     hreflang="en"
                     href="https://thinkerall.github.io/categories/"
                     /></url><url>
-            <loc>https://thinkerall.github.io/tags/mechanics/</loc><lastmod>2023-02-09T02:07:56&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://thinkerall.github.io/zh-cn/tags/mechanics/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://thinkerall.github.io/tags/mechanics/"
-                    /></url><url>
-            <loc>https://thinkerall.github.io/tags/particle-kinematics/</loc><lastmod>2023-02-09T02:07:56&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://thinkerall.github.io/posts/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://thinkerall.github.io/categories/data-structure-and-algorithm/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://thinkerall.github.io/tags/optimization/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://thinkerall.github.io/posts/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://thinkerall.github.io/zh-cn/posts/"
@@ -66,28 +41,7 @@
                     hreflang="en"
                     href="https://thinkerall.github.io/posts/"
                     /></url><url>
-            <loc>https://thinkerall.github.io/tags/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://thinkerall.github.io/zh-cn/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://thinkerall.github.io/tags/"
-                    /></url><url>
-            <loc>https://thinkerall.github.io/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://thinkerall.github.io/zh-cn/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://thinkerall.github.io/"
-                    /></url><url>
-            <loc>https://thinkerall.github.io/tags/algorithm/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://thinkerall.github.io/categories/data-structure-and-algorithm/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://thinkerall.github.io/tags/optimization/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://thinkerall.github.io/tags/recursion/</loc><lastmod>2023-02-09T13:30:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://thinkerall.github.io/tags/recursion/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://thinkerall.github.io/zh-cn/tags/recursion/"
@@ -96,17 +50,25 @@
                     hreflang="en"
                     href="https://thinkerall.github.io/tags/recursion/"
                     /></url><url>
-            <loc>https://thinkerall.github.io/tags/mechanics-introduction/</loc><lastmod>2023-02-09T01:12:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://thinkerall.github.io/categories/mechanics/</loc><lastmod>2023-02-09T01:12:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://thinkerall.github.io/tags/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="https://thinkerall.github.io/zh-cn/categories/mechanics/"
+                        href="https://thinkerall.github.io/zh-cn/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="https://thinkerall.github.io/categories/mechanics/"
+                    href="https://thinkerall.github.io/tags/"
                     /></url><url>
-            <loc>https://thinkerall.github.io/about/</loc><lastmod>2023-02-09T01:12:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://thinkerall.github.io/</loc><lastmod>2023-10-26T16:30:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="https://thinkerall.github.io/zh-cn/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="https://thinkerall.github.io/"
+                    /></url><url>
+            <loc>https://thinkerall.github.io/about/</loc><lastmod>2023-02-09T01:12:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="https://thinkerall.github.io/zh-cn/about/"

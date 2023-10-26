@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>William&#39;s Blog</title>
-        <link>https://thinkerall.github.io/zh-cn/</link>
-        <description>The website is a personal blog for learning and sharing knowledge.</description>
+        <title>递归 - 标签 - William&#39;s Blog</title>
+        <link>https://thinkerall.github.io/zh-cn/tags/%E9%80%92%E5%BD%92/</link>
+        <description>递归 - 标签 - William&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenweiye.thinker@gmail.com (William)</managingEditor>
-            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 Feb 2023 00:45:40 &#43;0800</lastBuildDate>
-            <atom:link href="https://thinkerall.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 Feb 2023 00:45:40 &#43;0800</lastBuildDate><atom:link href="https://thinkerall.github.io/zh-cn/tags/%E9%80%92%E5%BD%92/" rel="self" type="application/rss+xml" /><item>
     <title>递归算法</title>
     <link>https://thinkerall.github.io/zh-cn/recursion/</link>
     <pubDate>Wed, 08 Feb 2023 08:00:00 &#43;0800</pubDate>
