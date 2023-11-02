@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.119.0">
+	<meta name="generator" content="Hugo 0.120.3">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -9,6 +9,7 @@
 <meta property="og:description" content="The website is a personal blog for learning and sharing knowledge." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://thinkerall.github.io/" /><meta property="og:image" content="https://thinkerall.github.io/logo.png"/><meta property="og:site_name" content="William&#39;s Blog" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://thinkerall.github.io/logo.png"/>
 
@@ -105,6 +106,12 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" width="512" height="512" /></a></div><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/thinkerall" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://www.researchgate.net/profile/Weiye-Chen-5" title="ResearchGate" target="_blank" rel="noopener noreffer me"><i class="fab fa-researchgate fa-fw" aria-hidden="true"></i></a><a href="mailto:486103739@qq.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/newton-raphson/">Newton-Raphson method</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://thinkerall.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>William</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-11-01">2023-11-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/data-structure-and-algorithm/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Data Structure and Algorithm</a></span></div><div class="content">Introduction The Newton iteration method, as the name suggests, is a method proposed by Newton for solving approximate solutions to equations. This article mainly introduces the principle of Newton&rsquo;s iterative method and its application in solving square roots.
+Theory Assuming an approximate solution of equation $f(x)=0$ is $x_k$，the first-order Taylor expansion of $f(x)$ in $x_k$ is $f(x)=f(x_k)+f'(x_k)(x-x_k)+o(x)$，so $f(x_k)+f'(x_k)(x-x_k) \approx f(x)$. In order to obtain $f(x_k)+f'(x_k)(x-x_k)=0$，obtain a new approximate solution set to $x_{k+1}$, assum：</div><div class="post-footer">
+        <a href="/newton-raphson/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/numerical-analysis/">Numerical Analysis</a>,&nbsp;<a href="/tags/algorithm/">Algorithm</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/recursion/">Recursion Algorithm</a>
     </h1><div class="post-meta"><span class="post-author"><a href="https://thinkerall.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>William</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-02-08">2023-02-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/data-structure-and-algorithm/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Data Structure and Algorithm</a></span></div><div class="content">Introduction Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods. Simply put, it is the call of the program itself. The essence of recursive algorithm is to decompose the problem into smaller sub-problems, and then recursively call methods to represent the solution of the problem.
 Characteristics of Recursive Algorithm Recursive algorithm can simplify complex problems and make the code more concise. However, in the process of recursive call, the system opens up a stack for storing the return points and local quantities of each layer.</div><div class="post-footer">
@@ -121,7 +128,7 @@ Optimization of time complexity It is not difficult to see that when calculating
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/recursion/">Recursion</a>,&nbsp;<a href="/tags/algorithm/">Algorithm</a>,&nbsp;<a href="/tags/optimization/">Optimization</a></div></div>
 </article></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.119.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://thinkerall.github.io/" target="_blank">William</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

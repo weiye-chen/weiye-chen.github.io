@@ -4,9 +4,17 @@
         <link>https://thinkerall.github.io/zh-cn/</link>
         <description>The website is a personal blog for learning and sharing knowledge.</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenweiye.thinker@gmail.com (William)</managingEditor>
-            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 Feb 2023 00:45:40 &#43;0800</lastBuildDate>
+            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Nov 2023 08:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://thinkerall.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>牛顿迭代法</title>
+    <link>https://thinkerall.github.io/zh-cn/newton-raphson/</link>
+    <pubDate>Wed, 01 Nov 2023 08:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://thinkerall.github.io/zh-cn/newton-raphson/</guid>
+    <description><![CDATA[概述 牛顿迭代法顾名思义是由牛顿提出的一种用于解决方程近似解的方法。本文主要介绍牛顿迭代法的原理及其在求解平方根中的应用。 原理 假设方程$f(x]]></description>
+</item>
+<item>
     <title>递归算法</title>
     <link>https://thinkerall.github.io/zh-cn/recursion/</link>
     <pubDate>Wed, 08 Feb 2023 08:00:00 &#43;0800</pubDate>
