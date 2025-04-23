@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Recursion  Optimization  - William&#39;s Blog</title><meta name="Description" content="Recursive algorithm optimization methods and strategies"><meta property="og:title" content="Recursion  Optimization " />
+<meta property="og:description" content="Recursive algorithm optimization methods and strategies" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://weiye-chen.github.io/en/recursive-optimization/" /><meta property="og:image" content="https://weiye-chen.github.io/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-09T00:45:40+08:00" />
+<meta property="article:modified_time" content="2023-10-26T16:30:41+08:00" /><meta property="og:site_name" content="William&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://weiye-chen.github.io/logo.png" /><meta name="twitter:title" content="Recursion  Optimization "/>
+<meta name="twitter:description" content="Recursive algorithm optimization methods and strategies"/>
+<meta name="application-name" content="William&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="William&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://weiye-chen.github.io/en/recursive-optimization/" /><link rel="next" href="https://weiye-chen.github.io/en/recursion/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Recursion  Optimization ",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/weiye-chen.github.io\/en\/recursive-optimization\/"
+        },"image": ["https:\/\/weiye-chen.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Recursion, Algorithm, Optimization","wordcount":  719 ,
+        "url": "https:\/\/weiye-chen.github.io\/en\/recursive-optimization\/","datePublished": "2023-02-09T00:45:40+08:00","dateModified": "2023-10-26T16:30:41+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Weiye Chen","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/weiye-chen.github.io\/images\/avatar.png",
+                    "width":  512 ,
+                    "height":  512 
+                }},"author": {
+                "@type": "Person",
+                "name": "William"
+            },"description": "Recursive algorithm optimization methods and strategies"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/en/" title="William&#39;s Blog">William&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/en/posts/"> Posts </a><a class="menu-item" href="/en/tags/"> Tags </a><a class="menu-item" href="/en/categories/"> Categories </a><a class="menu-item" href="/en/about/"> About </a><a class="menu-item" href="https://github.com/weiye-chen" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/recursive-optimization/" selected>English</option><option value="/recursive-optimization/">简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/en/" title="William&#39;s Blog">William&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/en/posts/" title="">Posts</a><a class="menu-item" href="/en/tags/" title="">Tags</a><a class="menu-item" href="/en/categories/" title="">Categories</a><a class="menu-item" href="/en/about/" title="">About</a><a class="menu-item" href="https://github.com/weiye-chen" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/en/recursive-optimization/" selected>English</option><option value="/recursive-optimization/">简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Recursion  Optimization </h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://thinkerall.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>William</a></span>&nbsp;<span class="post-category">included in <a href="/en/categories/data-structure-and-algorithm/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Data Structure and Algorithm</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-09">2023-02-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;719 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#recursive-algorithm">Recursive Algorithm</a></li>
+    <li><a href="#recursive-algorithm-optimization-strategy">Recursive algorithm optimization strategy</a>
+      <ul>
+        <li><a href="#optimization-of-time-complexity">Optimization of time complexity</a></li>
+        <li><a href="#optimization-of-spatial-complexity">Optimization of spatial complexity</a>
+          <ul>
+            <li><a href="#function-rewrite">Function rewrite</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="recursive-algorithm">Recursive Algorithm</h2>
+<p> Generally speaking, recursive algorithms are inefficient and easy to cause stack overflow.<br>
+For a detailed introduction of recursive algorithm, see <a href="https://thinkerall.github.io/recursion/" target="_blank" rel="noopener noreffer ">Recursion Details</a></p>
+<h2 id="recursive-algorithm-optimization-strategy">Recursive algorithm optimization strategy</h2>
+<p> There are usually two recursive optimization strategies.</p>
+<ol>
+<li>Optimization of time complexity;</li>
+<li>Optimization of spatial complexity.</li>
+</ol>
+<p>This article takes Fibonacci sequence as an example to explain.</p>
+<h3 id="optimization-of-time-complexity">Optimization of time complexity</h3>
+<p> It is not difficult to see that when calculating f(n)=f(n-1)+f(n-2), we should first calculate f(n-1) and f(n-2),
+including f(n-1)=f(n-2)+f(n-3)and f(n-2)=f(n-3)+f(n-4). In the calculation process, f(n-2) is calculated twice.
+Therefore, there are a lot of redundant calculations in the calculation process of Fibonacci sequence.</p>
+<p> In order to eliminate the double calculation in the above cases,
+one idea is to store the intermediate results in the cache
+so that we can reuse them later without recalculation.
+This idea is also known as <strong>memorization</strong>, which is a technology often used with recursion.
+Therefore, we can use arrays or hash tables to store intermediate calculation results to reduce the number of calculations.(Space for Time)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int fibonacci(int n){
+</span></span><span class="line"><span class="cl">	if(n &lt; 0)
+</span></span><span class="line"><span class="cl">		return 0;
+</span></span><span class="line"><span class="cl">	if(n=0 || n=1)
+</span></span><span class="line"><span class="cl">		return n;
+</span></span><span class="line"><span class="cl">	int ret[n];
+</span></span><span class="line"><span class="cl">    ret[0] = 0;
+</span></span><span class="line"><span class="cl">    ret[1] = 1;
+</span></span><span class="line"><span class="cl">	for(int i=2; i&lt;=n; i++){
+</span></span><span class="line"><span class="cl">		ret[i]=ret[i-1]+ret[i-2];
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	return ret[n];
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p> Time complexity is from O(2^n) to O(n).
+The essence of the optimization algorithm is actually the idea of <strong>dynamic programming</strong>.</p>
+<h3 id="optimization-of-spatial-complexity">Optimization of spatial complexity</h3>
+<p> Recursive invocations will generate extra space on the system call stack.
+If the recursive call level is very deep, it is likely to cause stack overflow during program execution.
+In this case, there is a special recursion called <strong>tail recursion</strong>,
+which can control the impact of space overhead caused by recursion.</p>
+<blockquote>
+<p><strong>Tail recursion</strong></p>
+<p> Tail recursion is a special way of recursion.
+As the name implies, tail recursion is that the recursive call is the last instruction in the recursive function,
+and there must be only one recursive call in the function.</p>
+</blockquote>
+<blockquote>
+<p><strong>Tail call</strong></p>
+<p> The function call will form a &ldquo;<strong>call record</strong>&quot;(or &ldquo;<strong>call frame</strong>&rdquo; ) in memory,
+and save <strong>call location</strong> and <strong>internal variables</strong> and other information.
+If function B is called inside function A, a call record of B will be formed above the call record of A.
+The call record of B will not disappear until B finishes running and returns the result to A.
+If function B calls function C internally, there is also a call record stack for C.
+By analogy, all call records form a &ldquo;<strong>call stack</strong>&rdquo;.</p>
+<p> Because it is the last step of the function, tail call is not necessary to keep the call record of the outer function.
+Because the call location, internal variables and other information will not be used,
+it just replace the call record of the outer function with the call record of the inner function.</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int fibonacciTail(int n, int acc, int cal){
+</span></span><span class="line"><span class="cl">//acccollect the return value of the last run of the stack, 
+</span></span><span class="line"><span class="cl">//because the stack space will be reclaimed later.
+</span></span><span class="line"><span class="cl">//cal is every recursive calculation.
+</span></span><span class="line"><span class="cl">	if(n==0) return acc;
+</span></span><span class="line"><span class="cl">	if(n==1) return cal;
+</span></span><span class="line"><span class="cl">	retrun fibonacciTail(n-1, cal, acc+cal);
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p> The above function has two additional parameters,<br>
+one of which acts as an accumulator and records the return value of each previous stack, because the space of the original stack will be covered by the next layer of recursion.
+Another parameter is the operation of each recursion.<br>
+Because it is Fibonacci, here is the addition.
+The calling method of tail recursion is also different from the original one.Because the initial value of Fibonacci is f(0,1,1,2,…),
+for the following calls, acc is 0 and cal is 1 here.
+The method called is fibonacciTail(n,0,1).</p>
+<h4 id="function-rewrite">Function rewrite</h4>
+<p> The required parameters after the optimization of tail recursion are not intuitive enough.
+Therefore, we usually use the following two methods to rewrite.</p>
+<p> 1.Currying (Convert multi-parameter functions to single-parameter forms)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int fibonacciTail(int n, int acc, int cal){
+</span></span><span class="line"><span class="cl">	if(n==0) return acc;
+</span></span><span class="line"><span class="cl">	if(n==1) return cal;
+</span></span><span class="line"><span class="cl">	retrun fibonacciTail(n-1, cal, acc+cal);
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">int fibonacci(int n){
+</span></span><span class="line"><span class="cl">	return fibonacciTail(n, 0, 1);
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p> 2.Function parameter initialization</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int fibonacciTail(int n, int acc=0, int cal=1){
+</span></span><span class="line"><span class="cl">	if(n==0) return acc;
+</span></span><span class="line"><span class="cl">	if(n==1) return cal;
+</span></span><span class="line"><span class="cl">	retrun fibonacciTail(n-1, cal, acc+cal);
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="reference">Reference</h2>
+<p> <a href="https://zhuanlan.zhihu.com/p/150562212" target="_blank" rel="noopener noreffer ">Comprehend recursion</a></p>
+<p> <a href="https://blog.csdn.net/HEYUJIEBOY/article/details/76692870" target="_blank" rel="noopener noreffer ">Two optimization methods of Recursion</a></p>
+<p> <a href="https://cloud.tencent.com/developer/article/1694405" target="_blank" rel="noopener noreffer ">How to optimize recursion - Tail Recursion Optimization</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-10-26&nbsp;<a class="git-hash" href="https://github.com/weiye-chen/weiye-chen.github.io/commit/8025db3b0c13a4e4d4be569138298d21af292677" target="_blank" title="commit by thinkerall(486103739@qq.com) 8025db3b0c13a4e4d4be569138298d21af292677: update">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>8025db3</a></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/en/recursive-optimization/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://weiye-chen.github.io/en/recursive-optimization/" data-title="Recursion  Optimization " data-hashtags="Recursion,Algorithm,Optimization"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://weiye-chen.github.io/en/recursive-optimization/" data-hashtag="Recursion"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://weiye-chen.github.io/en/recursive-optimization/" data-title="Recursion  Optimization "><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://weiye-chen.github.io/en/recursive-optimization/" data-title="Recursion  Optimization "><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://weiye-chen.github.io/en/recursive-optimization/" data-title="Recursion  Optimization "><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/en/tags/recursion/">Recursion</a>,&nbsp;<a href="/en/tags/algorithm/">Algorithm</a>,&nbsp;<a href="/en/tags/optimization/">Optimization</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/en/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/en/recursion/" class="next" rel="next" title="Recursion Algorithm">Recursion Algorithm<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.122.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://weiye-chen.github.io/" target="_blank">William</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"gitalk":{"admin":["weiye-chen"],"clientID":"8716450d77022a5ec37e","clientSecret":"c7e86b40e9e18ed9327e71d6cd0c25226c20ec7f","id":"2023-02-09T00:45:40+08:00","owner":"weiye-chen","repo":"blog-comment","title":"Recursion  Optimization "}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"N170ZR7D2B","algoliaIndex":"index.en","algoliaSearchKey":"d760676380ec65544fbac0e68a8a7115","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-L7TNG89TL1', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-L7TNG89TL1" async></script></body>
+</html>

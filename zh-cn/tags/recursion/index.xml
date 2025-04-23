@@ -1,8 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>递归 - 标签 - William&#39;s Blog</title>
-        <link>https://thinkerall.github.io/zh-cn/tags/recursion/</link>
-        <description>递归 - 标签 - William&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenweiye.thinker@gmail.com (William)</managingEditor>
-            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://thinkerall.github.io/zh-cn/tags/recursion/" rel="self" type="application/rss+xml" /></channel>
-</rss>

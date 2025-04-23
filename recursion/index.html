@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Recursion Algorithm - William&#39;s Blog</title><meta name="Description" content="Detailed explanation of Recursion Algorithm."><meta property="og:title" content="Recursion Algorithm" />
-<meta property="og:description" content="Detailed explanation of Recursion Algorithm." />
+        <title>递归算法 - William&#39;s Blog</title><meta name="Description" content="递归详解"><meta property="og:title" content="递归算法" />
+<meta property="og:description" content="递归详解" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://thinkerall.github.io/recursion/" /><meta property="og:image" content="https://thinkerall.github.io/logo.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://weiye-chen.github.io/recursion/" /><meta property="og:image" content="https://weiye-chen.github.io/logo.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-02-08T08:00:00+08:00" />
 <meta property="article:modified_time" content="2023-10-26T16:30:41+08:00" /><meta property="og:site_name" content="William&#39;s Blog" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://thinkerall.github.io/logo.png" /><meta name="twitter:title" content="Recursion Algorithm"/>
-<meta name="twitter:description" content="Detailed explanation of Recursion Algorithm."/>
+<meta name="twitter:image" content="https://weiye-chen.github.io/logo.png" /><meta name="twitter:title" content="递归算法"/>
+<meta name="twitter:description" content="递归详解"/>
 <meta name="application-name" content="William&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="William&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://thinkerall.github.io/recursion/" /><link rel="prev" href="https://thinkerall.github.io/recursive-optimization/" /><link rel="next" href="https://thinkerall.github.io/newton-raphson/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://weiye-chen.github.io/recursion/" /><link rel="prev" href="https://weiye-chen.github.io/recursive-optimization/" /><link rel="next" href="https://weiye-chen.github.io/newton-raphson/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Recursion Algorithm",
-        "inLanguage": "en",
+        "headline": "递归算法",
+        "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/thinkerall.github.io\/recursion\/"
-        },"image": ["https:\/\/thinkerall.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Recursion, Algorithm","wordcount":  1006 ,
-        "url": "https:\/\/thinkerall.github.io\/recursion\/","datePublished": "2023-02-08T08:00:00+08:00","dateModified": "2023-10-26T16:30:41+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/weiye-chen.github.io\/recursion\/"
+        },"image": ["https:\/\/weiye-chen.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "递归, 算法","wordcount":  1765 ,
+        "url": "https:\/\/weiye-chen.github.io\/recursion\/","datePublished": "2023-02-08T08:00:00+08:00","dateModified": "2023-10-26T16:30:41+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Weiye Chen","logo": {
                     "@type": "ImageObject",
-                    "url": "https:\/\/thinkerall.github.io\/images\/avatar.png",
+                    "url": "https:\/\/weiye-chen.github.io\/images\/avatar.png",
                     "width":  512 ,
                     "height":  512 
                 }},"author": {
                 "@type": "Person",
                 "name": "William"
-            },"description": "Detailed explanation of Recursion Algorithm."
+            },"description": "递归详解"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -50,22 +50,22 @@
             <a href="/" title="William&#39;s Blog">William&#39;s Blog</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/thinkerall" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/weiye-chen/weiye-chen.github.io" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
                             <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
                             <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
                     <i class="fa fa-globe" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/recursion/" selected>English</option><option value="/zh-cn/recursion/">简体中文</option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/recursion/">English</option><option value="/recursion/" selected>简体中文</option></select>
                 </a></div>
         </div>
     </div>
@@ -81,11 +81,11 @@
         </div>
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
                             <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
@@ -93,13 +93,13 @@
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        Cancel
+                        取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/thinkerall" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/weiye-chen/weiye-chen.github.io" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/recursion/" selected>English</option><option value="/zh-cn/recursion/">简体中文</option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/en/recursion/">English</option><option value="/recursion/" selected>简体中文</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -109,52 +109,50 @@
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
+            <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Recursion Algorithm</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://thinkerall.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>William</a></span>&nbsp;<span class="post-category">included in <a href="/categories/data-structure-and-algorithm/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Data Structure and Algorithm</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-08">2023-02-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1006 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">递归算法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://thinkerall.github.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>William</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数据结构与算法</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-08">2023-02-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1765 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
-                    <span>Contents</span>
+                    <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#characteristics-of-recursive-algorithm">Characteristics of Recursive Algorithm</a></li>
-    <li><a href="#design-elements-of-recursive-algorithm">Design elements of Recursive Algorithm</a></li>
-    <li><a href="#the-cases-of-recursive-algorithm">The cases of Recursive Algorithm</a>
+    <li><a href="#概述">概述</a></li>
+    <li><a href="#递归算法的特点">递归算法的特点</a></li>
+    <li><a href="#递归算法的设计要素">递归算法的设计要素</a></li>
+    <li><a href="#案例分析">案例分析</a>
       <ul>
-        <li><a href="#the-calculation-of-factorial">The Calculation of factorial</a></li>
-        <li><a href="#fibonacci-sequence">Fibonacci sequence</a></li>
-        <li><a href="#hanoi-tower">Hanoi Tower</a></li>
+        <li><a href="#阶乘计算">阶乘计算</a></li>
+        <li><a href="#斐波那契数列">斐波那契数列</a></li>
+        <li><a href="#汉诺塔问题">汉诺塔问题</a></li>
       </ul>
     </li>
-    <li><a href="#recursion-and-loop">Recursion and Loop</a></li>
-    <li><a href="#reference">Reference</a></li>
+    <li><a href="#递归与循环">递归与循环</a></li>
+    <li><a href="#参考">参考</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="introduction">Introduction</h2>
-<p> Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods.
-Simply put, it is the call of the program itself.
-The essence of recursive algorithm is to decompose the problem into smaller sub-problems, and then recursively call methods to represent the solution of the problem.</p>
-<h2 id="characteristics-of-recursive-algorithm">Characteristics of Recursive Algorithm</h2>
-<p> Recursive algorithm can simplify complex problems and make the code more concise.
-However, in the process of recursive call, the system opens up a stack for storing the return points and local quantities of each layer.
-Too many times of recursion can easily cause stack overflow and low efficiency, so it is generally not recommended to use recursive algorithm to design programs.</p>
-<h2 id="design-elements-of-recursive-algorithm">Design elements of Recursive Algorithm</h2>
+            </div><div class="content" id="content"><h2 id="概述">概述</h2>
+<p>  递归算法是一种直接或者间接调用自身函数或者方法的算法。简单来说就是程序自身的调用。
+递归算法的本质是将问题不断分解为规模缩小的子问题，然后递归调用方法来表示问题的解。</p>
+<h2 id="递归算法的特点">递归算法的特点</h2>
+<p>  递归算法可以将复杂问题简单化，使代码更加简洁。
+但是，在递归调用的过程当中系统为每一层的返回点、局部量等开辟了栈来存储。
+递归次数过多容易造成栈溢出，运行效率较低，所以一般不提倡用递归算法设计程序。</p>
+<h2 id="递归算法的设计要素">递归算法的设计要素</h2>
 <ol>
-<li>Explicit recursion termination condition;</li>
-<li>Extract repetitive logic to reduce the scale of the problem;</li>
-<li>Give the processing method when recursion terminates.</li>
+<li>明确递归终止条件</li>
+<li>提取重复逻辑，缩小问题规模</li>
+<li>给出递归终止时的处理方式</li>
 </ol>
-<h2 id="the-cases-of-recursive-algorithm">The cases of Recursive Algorithm</h2>
-<h3 id="the-calculation-of-factorial">The Calculation of factorial</h3>
-<p> Factorial is a typical example of recursive algorithm. Factorial formula is n!=n*(n-1)*(n-2)*&hellip;*2*1 .
-For example, factorial(5)=5*4*3*2*1=120.
-The code for calculating factorial is as follows：</p>
+<h2 id="案例分析">案例分析</h2>
+<h3 id="阶乘计算">阶乘计算</h3>
+<p>  阶乘是典型的递归算法示例。阶乘公式是n!=n*(n-1)*(n-2)*&hellip;*2*1。
+例如5的阶乘是factorial(5)=5*4*3*2*1=120。计算阶乘代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -167,7 +165,7 @@ The code for calculating factorial is as follows：</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">int factorial(int n){
-</span></span><span class="line"><span class="cl">	if(n==1){//base case
+</span></span><span class="line"><span class="cl">	if(n==1){//基线条件(base case)
 </span></span><span class="line"><span class="cl">		return 1;
 </span></span><span class="line"><span class="cl">	}else{
 </span></span><span class="line"><span class="cl">		return n*factorial(n-1);
@@ -175,16 +173,15 @@ The code for calculating factorial is as follows：</p>
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p> The stop position is called the base case.
-The base case is the lowest position of the recursive program.
-There is no need to operate at this position, and a result can be returned directly.
-All recursive programs must have at least one base case, and must ensure that they will eventually reach a certain base case;
-Otherwise, the program will run forever until it lacks memory or stack space.</p>
-<h3 id="fibonacci-sequence">Fibonacci sequence</h3>
-<p> Fibonacci sequence was first used to describe the number of rabbits growing.
-Mathematically, Fibonacci sequence is defined by recursion.</p>
+</div><p>  停止的位置称为基线条件（base case）。
+基线条件是递归程序的最底层位置，在此位置时没有必要再进行操作，可以直接返回一个结果。
+所有递归程序都必须至少拥有一个基线条件，而且必须确保它们最终会达到某个基线条件；
+否则，程序将永远运行下去，直到程序缺少内存或者栈空间。</p>
+<h3 id="斐波那契数列">斐波那契数列</h3>
+<p>  斐波纳契数列(Fibonacci Sequence)，最开始用于描述兔子生长的数目时用上了这数列。
+从数学上，费波那契数列是以递归的方法来定义：</p>
 <data id="id-1" data-raw></data>
-<p> Therefore, Fibonacci sequence recursion program code is as follows：</p>
+<p>  因此斐波那契数列递归程序代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -203,10 +200,9 @@ Mathematically, Fibonacci sequence is defined by recursion.</p>
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="hanoi-tower">Hanoi Tower</h3>
-<p> Hanoi Tower problem is also a classical recursive problem.
-The problem is described as follows：</p>
-<p><figure><a class="lightgallery" href="./hanoi.gif" title="Hanoi" data-thumbnail="./hanoi.gif" data-sub-html="<h2>Figure1 Hanoi Tower</h2><p>Hanoi</p>">
+</div><h3 id="汉诺塔问题">汉诺塔问题</h3>
+<p>  汉诺塔问题也是一个经典递归问题。问题描述如下：</p>
+<p><figure><a class="lightgallery" href="./hanoi.gif" title="Hanoi" data-thumbnail="./hanoi.gif" data-sub-html="<h2>图1 汉诺塔问题</h2><p>Hanoi</p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -214,17 +210,17 @@ The problem is described as follows：</p>
             data-srcset="./hanoi.gif, ./hanoi.gif 1.5x, ./hanoi.gif 2x"
             data-sizes="auto"
             alt="./hanoi.gif" />
-    </a><figcaption class="image-caption">Figure1 Hanoi Tower</figcaption>
+    </a><figcaption class="image-caption">图1 汉诺塔问题</figcaption>
     </figure></p>
 <blockquote>
-<p>Hanoi Tower originates from an ancient Indian legend.
-When Brahma created the world, he made three diamond pillars, on which 64 gold discs were stacked in order of size from bottom to top.
-The Brahma ordered the Brahman to rearrange the disc from below on another pillar in order of size.
-It is also stipulated that <strong>cannot put the large disk on the small disk at any time, and only one disk can be moved between three columns at a time</strong>.
-How should we operate?</p>
+<p>汉诺塔问题是一个经典的问题。汉诺塔（Hanoi Tower），又称河内塔，源于印度一个古老传说。
+大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。
+大梵天命令婆罗门把圆盘从下面开始<strong>按大小顺序重新摆放在另一根柱子上</strong>。
+并且规定，任何时候，<strong>在小圆盘上都不能放大圆盘，且在三根柱子之间一次只能移动一个圆盘</strong>。
+问应该如何操作？</p>
 </blockquote>
-<p><strong>Problem analysis</strong></p>
-<p><figure><a class="lightgallery" href="./hanoi_sloving.gif" title="HanoiSloving" data-thumbnail="./hanoi_sloving.gif" data-sub-html="<h2>Figure2 Sloution to Honoi Tower</h2><p>HanoiSloving</p>">
+<p><strong>问题分析</strong></p>
+<p><figure><a class="lightgallery" href="./hanoi_sloving.gif" title="HanoiSloving" data-thumbnail="./hanoi_sloving.gif" data-sub-html="<h2>图2 汉诺塔问题的解决方案</h2><p>HanoiSloving</p>">
         <img
             class="lazyload"
             src="/svg/loading.min.svg"
@@ -232,20 +228,20 @@ How should we operate?</p>
             data-srcset="./hanoi_sloving.gif, ./hanoi_sloving.gif 1.5x, ./hanoi_sloving.gif 2x"
             data-sizes="auto"
             alt="./hanoi_sloving.gif" />
-    </a><figcaption class="image-caption">Figure2 Sloution to Honoi Tower</figcaption>
+    </a><figcaption class="image-caption">图2 汉诺塔问题的解决方案</figcaption>
     </figure></p>
 <ul>
-<li>If there is only one disk, you do not need to use the C-pillar to move the disk directly from A to B.</li>
-<li>If there are two disks, you can move disk 2 on disk 1 to C first; Move disc 1 to B; And then move disc 2 to B. This shows that two discs can be moved from A to B with the help of C.</li>
-<li>If there are three discs, the moving process is shown in Figure 2. According to the conclusion of the two disks, the two disks on disk 1 can be moved from A to B with the help of C; Move disk 1 from A to C, and A becomes empty ; With the help of the A-pillar, move the two discs from B to C.</li>
+<li>如果只有 1 个圆盘，则不需要利用C柱，直接将盘子从A移动到B。</li>
+<li>如果有 2 个圆盘，可以先将圆盘1上的圆盘2移动到C；将圆盘1移动到B；将圆盘2移动到B。这说明了：可以借助C将2个圆盘从A移动到B。</li>
+<li>如果有3个圆盘，移动过程如图2所示。根据2个圆盘的结论，可以借助C将圆盘1上的两个圆盘从A移动到B；将盘子1从A移动到C，A变成空柱；借助A柱，将B上的两个圆盘移动到C。</li>
 </ul>
-<p> So, the above idea can be extended to the case of n disks.</p>
+<p>  以此类推，上述的思路可以一直扩展到 n 个圆盘的情况。</p>
 <ol>
-<li>Move n-1 disks on the starting column to the auxiliary column;</li>
-<li>Move one disk left on the starting column to the target column;</li>
-<li>Move all the disks on the auxiliary column to the target column.</li>
+<li>将起始柱上的 n-1 个圆盘移动到辅助柱上；</li>
+<li>将起始柱上遗留的1个圆盘移动到目标柱上；</li>
+<li>将辅助柱上的所有圆盘移动到目标柱上。</li>
 </ol>
-<p> The code of Hanoi Tower is as follows：</p>
+<p>  汉诺塔问题代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -274,113 +270,113 @@ How should we operate?</p>
 </span><span class="lnt">24
 </span><span class="lnt">25
 </span><span class="lnt">26
-</span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="cm">/*num represents the number of disks.
-</span></span></span><span class="line"><span class="cl"><span class="cm">source、target and auxiliary represent the starting column、the target column and the target column.*/</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">hanoi</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">char</span> <span class="n">sou</span><span class="p">,</span> <span class="kt">char</span> <span class="n">tar</span><span class="p">,</span><span class="kt">char</span> <span class="n">aux</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//Count the number of moves
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1">//num 表示移动圆盘的数量，source、target、auxiliary 分别表示起始柱、目标柱和辅助柱
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">hanoi</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">char</span> <span class="n">sou</span><span class="p">,</span> <span class="kt">char</span> <span class="n">tar</span><span class="p">,</span><span class="kt">char</span> <span class="n">aux</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//统计移动次数
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">static</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//If the number of disks is only 1, move directly from the starting column to the target column
+</span></span><span class="line"><span class="cl">    <span class="c1">//如果圆盘数量仅有 1 个，则直接从起始柱移动到目标柱
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;No.%d:move from %c to %c</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">sou</span><span class="p">,</span> <span class="n">tar</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;第%d次:从 %c 移动至 %c</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">sou</span><span class="p">,</span> <span class="n">tar</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//Call the hanoi () function recursively，Move num-1 discs from the starting column to the auxiliary column
+</span></span><span class="line"><span class="cl">        <span class="c1">//递归调用 hanoi() 函数，将 num-1 个圆盘从起始柱移动到辅助柱上
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">hanoi</span><span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sou</span><span class="p">,</span> <span class="n">aux</span><span class="p">,</span> <span class="n">tar</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//Move the last large disk remaining on the starting column to the target column
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;No.%d:move from %c to %c</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">sou</span><span class="p">,</span> <span class="n">tar</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//将起始柱上剩余的最后一个大圆盘移动到目标柱上
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;第%d次:从 %c 移动至 %c</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">sou</span><span class="p">,</span> <span class="n">tar</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//Call the hanoi () function recursively to move the num-1 disk on the auxiliary column to the target column
+</span></span><span class="line"><span class="cl">        <span class="c1">//递归调用 hanoi() 函数，将辅助柱上的 num-1 圆盘移动到目标柱上
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">hanoi</span><span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">aux</span><span class="p">,</span> <span class="n">tar</span><span class="p">,</span> <span class="n">sou</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//Take moving 3 disks as an example, the starting column, target column and auxiliary column are represented by A, B and C respectively
+</span></span><span class="line"><span class="cl">    <span class="c1">//以移动 3 个圆盘为例，起始柱、目标柱、辅助柱分别用 A、B、C 表示
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">hanoi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="sc">&#39;A&#39;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">,</span> <span class="sc">&#39;C&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="recursion-and-loop">Recursion and Loop</h2>
+</div><h2 id="递归与循环">递归与循环</h2>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Recursion</th>
-<th>Loop</th>
+<th>递归</th>
+<th>循环</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>repeat</td>
-<td>To obtain the result, execute the same code block repeatedly; Repeated execution is realized by repeatedly calling yourself as a signal.</td>
-<td>To obtain the result, execute the same code block repeatedly; Repeat execution is achieved by completing the code block or executing the continue command signal.</td>
+<td>重复</td>
+<td>为了获得结果，反复执行同一代码块；以反复调用自己为信号而实现重复执行。</td>
+<td>为了获得结果，反复执行同一代码块；以完成代码块或者执行 continue 命令信号而实现重复执行。</td>
 </tr>
 <tr>
-<td>Termination conditions</td>
-<td>To ensure termination, recursive functions need to have a baseline condition to stop recursion.</td>
-<td>To ensure that it can be terminated, the loop must have one or more conditions that can make it terminate, and must ensure that it can meet one of these conditions under certain circumstances.</td>
+<td>终止条件</td>
+<td>为了确保能够终止，递归函数需要有一个基线条件，令函数停止递归。</td>
+<td>为了确保能够终止，循环必须要有一个或多个能够使其终止的条件，而且必须保证它能在某种情况下满足这些条件的其中之一。</td>
 </tr>
 <tr>
-<td>state</td>
-<td>The current state is passed as a parameter.</td>
-<td>Update the current state when the cycle is in progress.</td>
+<td>状态</td>
+<td>当前状态作为参数传递。</td>
+<td>循环进行时更新当前状态。</td>
 </tr>
 </tbody>
 </table>
-<p> Recursion has many similarities with loops. The difference is that the recursive function passes the new value as a parameter to the next function call, and rarely modifies the variable.
-Therefore, it can avoid using updatable variables, and at the same time, it can conduct repetitive and stateful behavior.</p>
-<h2 id="reference">Reference</h2>
-<p> <a href="https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/" target="_blank" rel="noopener noreffer ">Detailed explanation of recursive algorithm</a></p>
-<p> <a href="http://c.biancheng.net/algorithm/tower-of-hanoi.html" target="_blank" rel="noopener noreffer ">Hanoi Tower problem (divide and conquer+source code+animation demonstration)</a></p>
-<p> <a href="https://blog.csdn.net/lltqyl/article/details/106604387" target="_blank" rel="noopener noreffer ">Recursive algorithm (illustrated)</a></p>
+<p>  递归可以与循环转换，因此递归与循环有许多类似之处。
+在函数式编程中，使用递归代替循环。
+区别在于递归函数将新值作为参数传递给下一次函数调用，极少修改变量。
+因此其可以避免使用可更新变量，同时能够进行重复的、有状态的行为。</p>
+<h2 id="参考">参考</h2>
+<p>  <a href="https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/" target="_blank" rel="noopener noreffer ">递归算法详解</a></p>
+<p>  <a href="http://c.biancheng.net/algorithm/tower-of-hanoi.html" target="_blank" rel="noopener noreffer ">汉诺塔问题（分治+源码+动画演示）</a></p>
+<p>  <a href="https://blog.csdn.net/lltqyl/article/details/106604387" target="_blank" rel="noopener noreffer ">全面理解递归</a></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2023-10-26&nbsp;<a class="git-hash" href="https://github.com/thinkerall/thinkerall.github.io/commit/8025db3b0c13a4e4d4be569138298d21af292677" target="_blank" title="commit by thinkerall(486103739@qq.com) 8025db3b0c13a4e4d4be569138298d21af292677: update">
+                <span>更新于 2023-10-26&nbsp;<a class="git-hash" href="https://github.com/weiye-chen/weiye-chen.github.io/commit/8025db3b0c13a4e4d4be569138298d21af292677" target="_blank" title="commit by thinkerall(486103739@qq.com) 8025db3b0c13a4e4d4be569138298d21af292677: update">
                                     <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>8025db3</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/recursion/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/recursion/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://thinkerall.github.io/recursion/" data-title="Recursion Algorithm" data-hashtags="Recursion,Algorithm"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://thinkerall.github.io/recursion/" data-hashtag="Recursion"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://thinkerall.github.io/recursion/" data-title="Recursion Algorithm"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://thinkerall.github.io/recursion/" data-title="Recursion Algorithm"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://thinkerall.github.io/recursion/" data-title="Recursion Algorithm"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://weiye-chen.github.io/recursion/" data-title="递归算法" data-hashtags="递归,算法"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://weiye-chen.github.io/recursion/" data-hashtag="递归"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://weiye-chen.github.io/recursion/" data-title="递归算法"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://weiye-chen.github.io/recursion/" data-title="递归算法"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://weiye-chen.github.io/recursion/" data-title="递归算法"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/recursion/">Recursion</a>,&nbsp;<a href="/tags/algorithm/">Algorithm</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%80%92%E5%BD%92/">递归</a>,&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></section>
         <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/recursive-optimization/" class="prev" rel="prev" title="Recursion  Optimization "><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Recursion  Optimization </a>
-            <a href="/newton-raphson/" class="next" rel="next" title="Newton-Raphson method">Newton-Raphson method<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/recursive-optimization/" class="prev" rel="prev" title="递归优化"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>递归优化</a>
+            <a href="/newton-raphson/" class="next" rel="next" title="牛顿迭代法">牛顿迭代法<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="gitalk" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.122.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://thinkerall.github.io/" target="_blank">William</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.122.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://weiye-chen.github.io/" target="_blank">William</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"gitalk":{"admin":["thinkerall"],"clientID":"8716450d77022a5ec37e","clientSecret":"c7e86b40e9e18ed9327e71d6cd0c25226c20ec7f","id":"2023-02-08T08:00:00+08:00","owner":"thinkerall","repo":"blog-comment","title":"Recursion Algorithm"}},"data":{"id-1":"\n\\[ f(0)=0 \\\\ f(1)=1 \\\\ f(n)=f(n-1)+f(n-2) \\]\n"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"N170ZR7D2B","algoliaIndex":"index.en","algoliaSearchKey":"d760676380ec65544fbac0e68a8a7115","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"gitalk":{"admin":["weiye-chen"],"clientID":"8716450d77022a5ec37e","clientSecret":"c7e86b40e9e18ed9327e71d6cd0c25226c20ec7f","id":"2023-02-08T08:00:00+08:00","owner":"weiye-chen","repo":"blog-comment","title":"递归算法"}},"data":{"id-1":"\n\\[ f(0)=0 \\\\ f(1)=1 \\\\ f(n)=f(n-1)+f(n-2) \\]\n"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"N170ZR7D2B","algoliaIndex":"index.zh-cn","algoliaSearchKey":"d760676380ec65544fbac0e68a8a7115","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
             gtag('config', 'G-L7TNG89TL1', { 'anonymize_ip': true });
         </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-L7TNG89TL1" async></script></body>

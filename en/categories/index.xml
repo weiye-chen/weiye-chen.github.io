@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - William&#39;s Blog</title>
+        <link>https://weiye-chen.github.io/en/categories/</link>
+        <description>Categories - Category - William&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>chenweiye.thinker@gmail.com (William)</managingEditor>
+            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Apr 2025 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://weiye-chen.github.io/en/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Multi-threading</title>
+    <link>https://weiye-chen.github.io/en/categories/multi-threading/</link>
+    <pubDate>Tue, 22 Apr 2025 00:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/categories/multi-threading/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Data Structure and Algorithm</title>
+    <link>https://weiye-chen.github.io/en/categories/data-structure-and-algorithm/</link>
+    <pubDate>Wed, 01 Nov 2023 08:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/categories/data-structure-and-algorithm/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

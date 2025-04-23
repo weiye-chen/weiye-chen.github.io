@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Numerical Analysis - Tag - William&#39;s Blog</title>
+        <link>https://weiye-chen.github.io/en/tags/numerical-analysis/</link>
+        <description>Numerical Analysis - Tag - William&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>chenweiye.thinker@gmail.com (William)</managingEditor>
+            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Nov 2023 08:00:00 &#43;0800</lastBuildDate><atom:link href="https://weiye-chen.github.io/en/tags/numerical-analysis/" rel="self" type="application/rss+xml" /><item>
+    <title>Newton-Raphson method</title>
+    <link>https://weiye-chen.github.io/en/newton-raphson/</link>
+    <pubDate>Wed, 01 Nov 2023 08:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/newton-raphson/</guid>
+    <description><![CDATA[Introduction The Newton iteration method, as the name suggests, is a method proposed by Newton for solving approximate solutions to equations. This article mainly introduces the principle of Newton&rsquo;s iterative method and its application in solving square roots.
+Theory Assuming an approximate solution of equation $f(x)=0$ is $x_k$，the first-order Taylor expansion of $f(x)$ in $x_k$ is $f(x)=f(x_k)+f'(x_k)(x-x_k)+o(x)$，so $f(x_k)+f'(x_k)(x-x_k) \approx f(x)$. In order to obtain $f(x_k)+f'(x_k)(x-x_k)=0$，obtain a new approximate solution set to $x_{k+1}$, assum：]]></description>
+</item>
+</channel>
+</rss>

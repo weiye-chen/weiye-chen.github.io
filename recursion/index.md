@@ -1,54 +1,51 @@
-# Recursion Algorithm
+# 递归算法
 
-## Introduction
+## 概述
 
-&emsp;Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods. 
-Simply put, it is the call of the program itself.
-The essence of recursive algorithm is to decompose the problem into smaller sub-problems, and then recursively call methods to represent the solution of the problem.
+&emsp;&emsp;递归算法是一种直接或者间接调用自身函数或者方法的算法。简单来说就是程序自身的调用。
+递归算法的本质是将问题不断分解为规模缩小的子问题，然后递归调用方法来表示问题的解。
 
-## Characteristics of Recursive Algorithm
+## 递归算法的特点
 
-&emsp;Recursive algorithm can simplify complex problems and make the code more concise.
-However, in the process of recursive call, the system opens up a stack for storing the return points and local quantities of each layer.
-Too many times of recursion can easily cause stack overflow and low efficiency, so it is generally not recommended to use recursive algorithm to design programs.
+&emsp;&emsp;递归算法可以将复杂问题简单化，使代码更加简洁。
+但是，在递归调用的过程当中系统为每一层的返回点、局部量等开辟了栈来存储。
+递归次数过多容易造成栈溢出，运行效率较低，所以一般不提倡用递归算法设计程序。
 
-## Design elements of Recursive Algorithm
-1. Explicit recursion termination condition;
-2. Extract repetitive logic to reduce the scale of the problem;
-3. Give the processing method when recursion terminates.
+## 递归算法的设计要素
+1. 明确递归终止条件
+2. 提取重复逻辑，缩小问题规模
+3. 给出递归终止时的处理方式
 
-## The cases of Recursive Algorithm
+## 案例分析
 
-### The Calculation of factorial
-&emsp;Factorial is a typical example of recursive algorithm. Factorial formula is n!=n\*(n-1)\*(n-2)\*...\*2\*1 .
-For example, factorial(5)=5\*4\*3\*2\*1=120. 
-The code for calculating factorial is as follows：
+### 阶乘计算
+&emsp;&emsp;阶乘是典型的递归算法示例。阶乘公式是n!=n\*(n-1)\*(n-2)\*...\*2\*1。
+例如5的阶乘是factorial(5)=5\*4\*3\*2\*1=120。计算阶乘代码如下：
 
 ```
 int factorial(int n){
-	if(n==1){//base case
+	if(n==1){//基线条件(base case)
 		return 1;
 	}else{
 		return n*factorial(n-1);
 	}
 }
 ```
-&emsp;The stop position is called the base case. 
-The base case is the lowest position of the recursive program. 
-There is no need to operate at this position, and a result can be returned directly. 
-All recursive programs must have at least one base case, and must ensure that they will eventually reach a certain base case; 
-Otherwise, the program will run forever until it lacks memory or stack space. 
+&emsp;&emsp;停止的位置称为基线条件（base case）。
+基线条件是递归程序的最底层位置，在此位置时没有必要再进行操作，可以直接返回一个结果。
+所有递归程序都必须至少拥有一个基线条件，而且必须确保它们最终会达到某个基线条件；
+否则，程序将永远运行下去，直到程序缺少内存或者栈空间。
 
-### Fibonacci sequence
+### 斐波那契数列
 
-&emsp;Fibonacci sequence was first used to describe the number of rabbits growing. 
-Mathematically, Fibonacci sequence is defined by recursion. 
+&emsp;&emsp;斐波纳契数列(Fibonacci Sequence)，最开始用于描述兔子生长的数目时用上了这数列。
+从数学上，费波那契数列是以递归的方法来定义：
 
 {{< raw >}}
 \[ f(0)=0 \\ f(1)=1 \\ f(n)=f(n-1)+f(n-2) \]
 {{< /raw >}}
 
-&emsp;Therefore, Fibonacci sequence recursion program code is as follows：
+&emsp;&emsp;因此斐波那契数列递归程序代码如下：
 
 ```
 int Fibonacci(int n){
@@ -59,78 +56,80 @@ int Fibonacci(int n){
 }
 ```
 
-### Hanoi Tower
-&emsp;Hanoi Tower problem is also a classical recursive problem. 
-The problem is described as follows：
+### 汉诺塔问题
+&emsp;&emsp;汉诺塔问题也是一个经典递归问题。问题描述如下：
 
-![Hanoi](./hanoi.gif "Figure1 Hanoi Tower")
+![Hanoi](./hanoi.gif "图1 汉诺塔问题")
 
-> Hanoi Tower originates from an ancient Indian legend. 
-When Brahma created the world, he made three diamond pillars, on which 64 gold discs were stacked in order of size from bottom to top. 
-The Brahma ordered the Brahman to rearrange the disc from below on another pillar in order of size. 
-It is also stipulated that **cannot put the large disk on the small disk at any time, and only one disk can be moved between three columns at a time**. 
-How should we operate?
+> 汉诺塔问题是一个经典的问题。汉诺塔（Hanoi Tower），又称河内塔，源于印度一个古老传说。
+大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。
+大梵天命令婆罗门把圆盘从下面开始**按大小顺序重新摆放在另一根柱子上**。
+并且规定，任何时候，**在小圆盘上都不能放大圆盘，且在三根柱子之间一次只能移动一个圆盘**。
+问应该如何操作？
 
-**Problem analysis**
+**问题分析**
 
-![HanoiSloving](./hanoi_sloving.gif "Figure2 Sloution to Honoi Tower")
+![HanoiSloving](./hanoi_sloving.gif "图2 汉诺塔问题的解决方案")
 
-* If there is only one disk, you do not need to use the C-pillar to move the disk directly from A to B.
-* If there are two disks, you can move disk 2 on disk 1 to C first; Move disc 1 to B; And then move disc 2 to B. This shows that two discs can be moved from A to B with the help of C.
-* If there are three discs, the moving process is shown in Figure 2. According to the conclusion of the two disks, the two disks on disk 1 can be moved from A to B with the help of C; Move disk 1 from A to C, and A becomes empty ; With the help of the A-pillar, move the two discs from B to C.
+* 如果只有 1 个圆盘，则不需要利用C柱，直接将盘子从A移动到B。
+* 如果有 2 个圆盘，可以先将圆盘1上的圆盘2移动到C；将圆盘1移动到B；将圆盘2移动到B。这说明了：可以借助C将2个圆盘从A移动到B。
+* 如果有3个圆盘，移动过程如图2所示。根据2个圆盘的结论，可以借助C将圆盘1上的两个圆盘从A移动到B；将盘子1从A移动到C，A变成空柱；借助A柱，将B上的两个圆盘移动到C。
 
-&emsp;So, the above idea can be extended to the case of n disks. 
+&emsp;&emsp;以此类推，上述的思路可以一直扩展到 n 个圆盘的情况。
 
-1. Move n-1 disks on the starting column to the auxiliary column;
-2. Move one disk left on the starting column to the target column;
-3. Move all the disks on the auxiliary column to the target column.
+1. 将起始柱上的 n-1 个圆盘移动到辅助柱上；
+2. 将起始柱上遗留的1个圆盘移动到目标柱上；
+3. 将辅助柱上的所有圆盘移动到目标柱上。
 
-&emsp;The code of Hanoi Tower is as follows：
+&emsp;&emsp;汉诺塔问题代码如下：
 
 ```
 #include <stdio.h>
-/*num represents the number of disks.
-source、target and auxiliary represent the starting column、the target column and the target column.*/
+//num 表示移动圆盘的数量，source、target、auxiliary 分别表示起始柱、目标柱和辅助柱
 void hanoi(int num, char sou, char tar,char aux) {
-    //Count the number of moves
+    //统计移动次数
     static int i = 1;
-    //If the number of disks is only 1, move directly from the starting column to the target column
+    //如果圆盘数量仅有 1 个，则直接从起始柱移动到目标柱
     if (num == 1) {
-        printf("No.%d:move from %c to %c\n", i, sou, tar);
+        printf("第%d次:从 %c 移动至 %c\n", i, sou, tar);
         i++;
     }
     else {
-        //Call the hanoi () function recursively，Move num-1 discs from the starting column to the auxiliary column
+        //递归调用 hanoi() 函数，将 num-1 个圆盘从起始柱移动到辅助柱上
         hanoi(num - 1, sou, aux, tar);
-        //Move the last large disk remaining on the starting column to the target column
-        printf("No.%d:move from %c to %c\n", i, sou, tar);
+        //将起始柱上剩余的最后一个大圆盘移动到目标柱上
+        printf("第%d次:从 %c 移动至 %c\n", i, sou, tar);
         i++;
-        //Call the hanoi () function recursively to move the num-1 disk on the auxiliary column to the target column
+        //递归调用 hanoi() 函数，将辅助柱上的 num-1 圆盘移动到目标柱上
         hanoi(num - 1, aux, tar, sou);
     }
 }
 int main()
 {
-    //Take moving 3 disks as an example, the starting column, target column and auxiliary column are represented by A, B and C respectively
+    //以移动 3 个圆盘为例，起始柱、目标柱、辅助柱分别用 A、B、C 表示
     hanoi(3, 'A', 'B', 'C');
     return 0;
 }
 ```
 
-## Recursion and Loop
+## 递归与循环
 
-|          | Recursion | Loop |
+|          | 递归 | 循环 |
 | -------- | ---------------------------------------- | ---------------------------------- |
-| repeat     | To obtain the result, execute the same code block repeatedly; Repeated execution is realized by repeatedly calling yourself as a signal. | To obtain the result, execute the same code block repeatedly; Repeat execution is achieved by completing the code block or executing the continue command signal. |
-| Termination conditions | To ensure termination, recursive functions need to have a baseline condition to stop recursion. | To ensure that it can be terminated, the loop must have one or more conditions that can make it terminate, and must ensure that it can meet one of these conditions under certain circumstances. |
-| state     | The current state is passed as a parameter. | Update the current state when the cycle is in progress. |
+| 重复     | 为了获得结果，反复执行同一代码块；以反复调用自己为信号而实现重复执行。 | 为了获得结果，反复执行同一代码块；以完成代码块或者执行 continue 命令信号而实现重复执行。 |
+| 终止条件 | 为了确保能够终止，递归函数需要有一个基线条件，令函数停止递归。 | 为了确保能够终止，循环必须要有一个或多个能够使其终止的条件，而且必须保证它能在某种情况下满足这些条件的其中之一。 |
+| 状态     | 当前状态作为参数传递。 | 循环进行时更新当前状态。 |
 
-&emsp;Recursion has many similarities with loops. The difference is that the recursive function passes the new value as a parameter to the next function call, and rarely modifies the variable.
-Therefore, it can avoid using updatable variables, and at the same time, it can conduct repetitive and stateful behavior.
-## Reference
+&emsp;&emsp;递归可以与循环转换，因此递归与循环有许多类似之处。
+在函数式编程中，使用递归代替循环。
+区别在于递归函数将新值作为参数传递给下一次函数调用，极少修改变量。
+因此其可以避免使用可更新变量，同时能够进行重复的、有状态的行为。
 
-&emsp;[Detailed explanation of recursive algorithm](https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/)
+## 参考
 
-&emsp;[Hanoi Tower problem (divide and conquer+source code+animation demonstration)](http://c.biancheng.net/algorithm/tower-of-hanoi.html)
+&emsp;&emsp;[递归算法详解](https://chenqx.github.io/2014/09/29/Algorithm-Recursive-Programming/)
 
-&emsp;[Recursive algorithm (illustrated)](https://blog.csdn.net/lltqyl/article/details/106604387)
+&emsp;&emsp;[汉诺塔问题（分治+源码+动画演示）](http://c.biancheng.net/algorithm/tower-of-hanoi.html)
+
+&emsp;&emsp;[全面理解递归](https://blog.csdn.net/lltqyl/article/details/106604387)
+

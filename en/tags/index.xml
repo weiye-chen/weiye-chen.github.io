@@ -1,0 +1,56 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - William&#39;s Blog</title>
+        <link>https://weiye-chen.github.io/en/tags/</link>
+        <description>Tags - Tag - William&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>chenweiye.thinker@gmail.com (William)</managingEditor>
+            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Apr 2025 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://weiye-chen.github.io/en/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43;</title>
+    <link>https://weiye-chen.github.io/en/tags/c&#43;&#43;/</link>
+    <pubDate>Tue, 22 Apr 2025 00:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/tags/c&#43;&#43;/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Multi-threading</title>
+    <link>https://weiye-chen.github.io/en/tags/multi-threading/</link>
+    <pubDate>Tue, 22 Apr 2025 00:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/tags/multi-threading/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Algorithm</title>
+    <link>https://weiye-chen.github.io/en/tags/algorithm/</link>
+    <pubDate>Wed, 01 Nov 2023 08:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/tags/algorithm/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Numerical Analysis</title>
+    <link>https://weiye-chen.github.io/en/tags/numerical-analysis/</link>
+    <pubDate>Wed, 01 Nov 2023 08:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/tags/numerical-analysis/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Optimization</title>
+    <link>https://weiye-chen.github.io/en/tags/optimization/</link>
+    <pubDate>Thu, 09 Feb 2023 00:45:40 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/tags/optimization/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Recursion</title>
+    <link>https://weiye-chen.github.io/en/tags/recursion/</link>
+    <pubDate>Thu, 09 Feb 2023 00:45:40 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/tags/recursion/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

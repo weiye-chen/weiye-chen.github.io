@@ -1,30 +1,27 @@
-# Recursion  Optimization 
+# 递归优化
 
-## Recursive Algorithm
+## 递归算法
 
-&emsp;Generally speaking, recursive algorithms are inefficient and easy to cause stack overflow.  
-For a detailed introduction of recursive algorithm, see [Recursion Details](https://thinkerall.github.io/recursion/)
+通常来说，递归算法的运行效率很低，容易造成栈溢出。有关递归算法的详细介绍见[递归详解](https://thinkerall.github.io/zh-cn/recursion/)。
 
-## Recursive algorithm optimization strategy
+## 递归算法优化策略
 
-&emsp;There are usually two recursive optimization strategies.
+递归优化策略通常有两种。
 
-1. Optimization of time complexity;
-2. Optimization of spatial complexity.
+1. 时间复杂度的优化；
+2. 空间复杂度的优化。
 
-This article takes Fibonacci sequence as an example to explain.
+本文以斐波那契数列为例进行讲解。
 
-### Optimization of time complexity 
+### 时间复杂度的优化 
 
-&emsp;It is not difficult to see that when calculating f(n)=f(n-1)+f(n-2), we should first calculate f(n-1) and f(n-2), 
-including f(n-1)=f(n-2)+f(n-3)and f(n-2)=f(n-3)+f(n-4). In the calculation process, f(n-2) is calculated twice. 
-Therefore, there are a lot of redundant calculations in the calculation process of Fibonacci sequence. 
+&emsp;&emsp;不难看出，在计算f(n)=f(n-1)+f(n-2)时，要先计算f(n-1)和f(n-2),其中
+f(n-1)=f(n-2)+f(n-3)，f(n-2)=f(n-3)+f(n-4)。在计算过程中，f(n-2)被计算了两次。
+因此在，斐波那契数列的计算过程中存在着大量的冗余计算。
 
-&emsp;In order to eliminate the double calculation in the above cases, 
-one idea is to store the intermediate results in the cache 
-so that we can reuse them later without recalculation. 
-This idea is also known as **memorization**, which is a technology often used with recursion. 
-Therefore, we can use arrays or hash tables to store intermediate calculation results to reduce the number of calculations.(Space for Time)
+&emsp;&emsp;为了消除上述情况中的重复计算，其中一个想法是将中间结果存储在缓存中，以便我们以后可以重用它们，而不需要重新计算。
+这个想法也被称为**记忆化**，这是一种经常与递归一起使用的技术。
+因此，我们可以使用数组或者哈希表来存储中间计算结果，以减少计算次数。(空间换时间)
 
 ```
 int fibonacci(int n){
@@ -42,63 +39,56 @@ int fibonacci(int n){
 }
 ```
 
-&emsp;Time complexity is from O(2^n) to O(n). 
-The essence of the optimization algorithm is actually the idea of **dynamic programming**.
+时间复杂度O(2^n)-\>O(n)，该优化算法的本质其实是**动态规划**的思想。
 
-### Optimization of spatial complexity
+### 空间复杂度的优化
 
-&emsp;Recursive invocations will generate extra space on the system call stack. 
-If the recursive call level is very deep, it is likely to cause stack overflow during program execution. 
-In this case, there is a special recursion called **tail recursion**, 
-which can control the impact of space overhead caused by recursion. 
+&emsp;&emsp;递归调用在系统调用栈上会产生额外空间，如果递归调用层级很深，程序执行过程中很可能导致栈溢出。
+针对这种情况，有一种称为**尾递归**的特殊递归，它可以控制递归导致空间开销的影响。
 
-> **Tail recursion**
+> **尾递归**
 >
-> &emsp;Tail recursion is a special way of recursion. 
-As the name implies, tail recursion is that the recursive call is the last instruction in the recursive function, 
-and there must be only one recursive call in the function.
+> &emsp;&emsp;尾递归是一种特殊的递归方式。
+> 顾名思义，尾递归就是递归调用为递归函数中的最后一条指令，并且在函数中应该只有一次递归调用。
 
-> **Tail call**
+> **尾调用**
 >
-> &emsp;The function call will form a "**call record**"(or "**call frame**" ) in memory,
-and save **call location** and **internal variables** and other information.
-If function B is called inside function A, a call record of B will be formed above the call record of A.
-The call record of B will not disappear until B finishes running and returns the result to A.
-If function B calls function C internally, there is also a call record stack for C.
-By analogy, all call records form a "**call stack**".
+> &emsp;&emsp;函数调用会在内存形成一个"**调用记录**"，又称"**调用帧**"**（call frame）**，保存**调用位置**和**内部变量**等信息。
+> 如果在函数A的内部调用函数B，那么在A的调用记录上方，还会形成一个B的调用记录。
+> 等到B运行结束，将结果返回到A，B的调用记录才会消失。
+> 如果函数B内部还调用函数C，那就还有一个C的调用记录栈。
+> 以此类推，所有的调用记录，就形成一个"**调用栈**"**（call stack）**。
 >
-> &emsp;Because it is the last step of the function, tail call is not necessary to keep the call record of the outer function. 
-Because the call location, internal variables and other information will not be used, 
-it just replace the call record of the outer function with the call record of the inner function.
+> &emsp;&emsp;尾调用由于是函数的最后一步操作，所以不需要保留外层函数的调用记录，
+> 因为调用位置、内部变量等信息都不会再用到了，
+> 只要直接用内层函数的调用记录，取代外层函数的调用记录就可以了。
 
 ```
 int fibonacciTail(int n, int acc, int cal){
-//acccollect the return value of the last run of the stack, 
-//because the stack space will be reclaimed later.
-//cal is every recursive calculation.
+//acc充当收集器的左右，收集上一次运行栈的返回值，因为之后栈空间会被回收
+//cal是每一次递归的计算
 	if(n==0) return acc;
 	if(n==1) return cal;
 	retrun fibonacciTail(n-1, cal, acc+cal);
 }
 ```
 
-&emsp;The above function has two additional parameters,  
-one of which acts as an accumulator and records the return value of each previous stack, because the space of the original stack will be covered by the next layer of recursion. 
-Another parameter is the operation of each recursion.  
-Because it is Fibonacci, here is the addition. 
-The calling method of tail recursion is also different from the original one.Because the initial value of Fibonacci is f(0,1,1,2,…), 
-for the following calls, acc is 0 and cal is 1 here. 
-The method called is fibonacciTail(n,0,1). 
+&emsp;&emsp;上面的函数多了2个参数，一个起到收集器（accumulator)的作用，记录每上一次栈的返回值，因为原来栈的空间会被下一层递归覆盖。
+还有一个参数就是每次递归的操作了，因为是斐波那契，所以这里是相加。
+尾递归的调用方法也与原来的不一样。因为斐波那契的初始值 ( 0，1 ，1，2 ，……)，
+所以以下的调用，acc 要用初始值 0，cal 也要用第二位的值这里也是1，
+调用的方法就是 fibonacciTail(n, 0, 1）。
 
-#### Function rewrite
+#### 函数改写
 
-&emsp;The required parameters after the optimization of tail recursion are not intuitive enough. 
-Therefore, we usually use the following two methods to rewrite.
+&emsp;&emsp;尾递归函数优化后函数需要的参数不够直观。因此，我们通常使用下面两种方法进行改写。
 
-&emsp;1.Currying (Convert multi-parameter functions to single-parameter forms)
+&emsp;&emsp;1.柯里化（currying），将多参数的函数转换成单参数的形式
 
 ```
 int fibonacciTail(int n, int acc, int cal){
+//acc充当收集器的左右，收集上一次运行栈的返回值，因为之后栈空间会被回收
+//cal是每一次递归的计算
 	if(n==0) return acc;
 	if(n==1) return cal;
 	retrun fibonacciTail(n-1, cal, acc+cal);
@@ -108,19 +98,21 @@ int fibonacci(int n){
 }
 ```
 
-&emsp;2.Function parameter initialization
+&emsp;&emsp;2.函数参数初始化
 
 ```
 int fibonacciTail(int n, int acc=0, int cal=1){
+//acc充当收集器的左右，收集上一次运行栈的返回值，因为之后栈空间会被回收
+//cal是每一次递归的计算
 	if(n==0) return acc;
 	if(n==1) return cal;
 	retrun fibonacciTail(n-1, cal, acc+cal);
 }
 ```
-## Reference
+## 参考
 
-&emsp;[Comprehend recursion](https://zhuanlan.zhihu.com/p/150562212)
+&emsp;&emsp;[全面理解递归](https://zhuanlan.zhihu.com/p/150562212)
 
-&emsp;[Two optimization methods of Recursion](https://blog.csdn.net/HEYUJIEBOY/article/details/76692870)
+&emsp;&emsp;[递归（Recursion）的两种优化方法](https://blog.csdn.net/HEYUJIEBOY/article/details/76692870)
 
-&emsp;[How to optimize recursion - Tail Recursion Optimization](https://cloud.tencent.com/developer/article/1694405)
+&emsp;&emsp;[递归如何优化-尾递归优化](https://cloud.tencent.com/developer/article/1694405)

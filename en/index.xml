@@ -1,0 +1,48 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>William&#39;s Blog</title>
+        <link>https://weiye-chen.github.io/en/</link>
+        <description>The website is a personal blog for learning and sharing knowledge.</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>chenweiye.thinker@gmail.com (William)</managingEditor>
+            <webMaster>chenweiye.thinker@gmail.com (William)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Apr 2025 00:00:00 &#43;0800</lastBuildDate>
+            <atom:link href="https://weiye-chen.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Multi-threading</title>
+    <link>https://weiye-chen.github.io/en/multhread/</link>
+    <pubDate>Tue, 22 Apr 2025 00:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/multhread/</guid>
+    <description><![CDATA[Multi-threading why do we need to use multi thread]]></description>
+</item>
+<item>
+    <title>Newton-Raphson method</title>
+    <link>https://weiye-chen.github.io/en/newton-raphson/</link>
+    <pubDate>Wed, 01 Nov 2023 08:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/newton-raphson/</guid>
+    <description><![CDATA[Introduction The Newton iteration method, as the name suggests, is a method proposed by Newton for solving approximate solutions to equations. This article mainly introduces the principle of Newton&rsquo;s iterative method and its application in solving square roots.
+Theory Assuming an approximate solution of equation $f(x)=0$ is $x_k$，the first-order Taylor expansion of $f(x)$ in $x_k$ is $f(x)=f(x_k)+f'(x_k)(x-x_k)+o(x)$，so $f(x_k)+f'(x_k)(x-x_k) \approx f(x)$. In order to obtain $f(x_k)+f'(x_k)(x-x_k)=0$，obtain a new approximate solution set to $x_{k+1}$, assum：]]></description>
+</item>
+<item>
+    <title>Recursion Algorithm</title>
+    <link>https://weiye-chen.github.io/en/recursion/</link>
+    <pubDate>Wed, 08 Feb 2023 08:00:00 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/recursion/</guid>
+    <description><![CDATA[Introduction Recursive algorithm is an algorithm which directly or indirectly calls its own functions or methods. Simply put, it is the call of the program itself. The essence of recursive algorithm is to decompose the problem into smaller sub-problems, and then recursively call methods to represent the solution of the problem.
+Characteristics of Recursive Algorithm Recursive algorithm can simplify complex problems and make the code more concise. However, in the process of recursive call, the system opens up a stack for storing the return points and local quantities of each layer.]]></description>
+</item>
+<item>
+    <title>Recursion  Optimization </title>
+    <link>https://weiye-chen.github.io/en/recursive-optimization/</link>
+    <pubDate>Thu, 09 Feb 2023 00:45:40 &#43;0800</pubDate>
+    <author>William</author>
+    <guid>https://weiye-chen.github.io/en/recursive-optimization/</guid>
+    <description><![CDATA[Recursive Algorithm Generally speaking, recursive algorithms are inefficient and easy to cause stack overflow.
+For a detailed introduction of recursive algorithm, see Recursion Details
+Recursive algorithm optimization strategy There are usually two recursive optimization strategies.
+Optimization of time complexity; Optimization of spatial complexity. This article takes Fibonacci sequence as an example to explain.
+Optimization of time complexity It is not difficult to see that when calculating f(n)=f(n-1)+f(n-2), we should first calculate f(n-1) and f(n-2), including f(n-1)=f(n-2)+f(n-3)and f(n-2)=f(n-3)+f(n-4).]]></description>
+</item>
+</channel>
+</rss>

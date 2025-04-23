@@ -1,17 +1,17 @@
-# The statement about this website 
+# 关于本站声明
 
-## Welcome to visit this site!!! :wink:
+## 欢迎访问本站点！！！ :wink:
 
-This site is designed to record and share knowledge for personal blog.:innocent:
+该站点为个人博客记录和分享知识。:innocent:
 
-Welcome to leave comments at the bottom of these articles, and please follow the corresponding rules.:smile:
+欢迎各位在文章下方进行留言评论，同时请遵守相应规则。:smile:
 
-### About content description
+### 关于内容说明
 
-Because the blogger is not knowledgeable enough, there may be some problems in the content of these articles. Please leave a message to point out these problems or contact the blogger.:smiley:
+由于博主才识疏浅，文章内容可能存在一定的问题，欢迎留言指出或联系博主。:smiley:
 
-### About articles transferred from the Internet
+### 关于转载文章说明
 
-Reprinted articles are only for personal collection and sharing of knowledge. In case of infringement, please contact the blogger to delete them. :bow:
+转载文章仅为个人收藏，分享知识，如有侵权，请联系博主进行删除。:bow:
 
 
